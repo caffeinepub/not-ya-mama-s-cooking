@@ -68,9 +68,9 @@ export function Header() {
         <p className="font-script text-cream text-sm sm:text-base flex items-center justify-center gap-2 leading-tight">
           <Flame size={14} className="text-gold fill-gold flex-shrink-0" />
           <span>
-            Life's Too Short for Bland Food —{' '}
+            Delicious Mexican food for every{' '}
             <span className="text-gold font-bold not-italic font-body text-xs sm:text-sm tracking-wide uppercase">
-              Eat Like You Mean It
+              special occasion
             </span>
           </span>
           <Flame size={14} className="text-gold fill-gold flex-shrink-0" />

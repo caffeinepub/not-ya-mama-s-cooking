@@ -1,15 +1,15 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-03-02T21:06:29.427Z",
-  "summary": "Both REQ-1 and REQ-2 appear to be implemented in the diff. The quesadilla menu card image reference has been updated to 'quesadilla-cheese-sides.dim_800x600.png' in MenuSection.tsx, and a creative Mexican food tagline bar ('Life's Too Short for Bland Food — Eat Like You Mean It') has been added to Header.tsx. No missing requirements or hallucinated features are identified.",
+  "generatedAt": "2026-03-02T21:13:25.885Z",
+  "summary": "Both REQ-1 and REQ-2 appear to be implemented in the diff. The tagline text is updated to 'Delicious Mexican food for every special occasion' in Header.tsx, and the hero section has been given pt-[116px] top padding with the background image container offset set to top-[116px] to prevent header overlap.",
   "missing_requirements": [],
   "hallucinated_features": [],
-  "confidence": 0.9,
+  "confidence": 0.95,
   "changed_files": [
     "frontend-file-summaries.txt",
     "frontend/src/components/Header.tsx",
-    "frontend/src/components/MenuSection.tsx",
+    "frontend/src/components/HeroSection.tsx",
     "project_state.json"
   ]
 }

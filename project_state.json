@@ -1,23 +1,24 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Mexican food website (quesadilla menu) with image and header customization in progress.",
+  "summary": "Mexican food themed app/website featuring a girl image and header text about delicious Mexican food for special occasions.",
   "architectural_notes": [],
-  "known_issues": [],
-  "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- A lightly cooked pale-golden cheese quesadilla cut in half with no steam, served on a rustic plate with small side portions of fresh green cilantro, thinly sliced white onions, a small bowl of red salsa, and a dollop of sour cream arranged beside it on a warm wooden surface (quesadilla-cheese-sides.dim_800x600.png)",
+  "known_issues": [
+    "Header is overlapping/covering the girl image"
+  ],
+  "isFixRequest": true,
   "existing_features": [
     {
-      "id": "feature-replace-the-quesadilla-menu-card-image-located-at-the-card-identified-by-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-1-div-3-article-4-div-1-div-1-with-a-newly-generated-image-showing-a-lightly-cooked-not-fully-browned-cheese-only-quesadilla-with-no-steam-rising-from-it-plated-alongside-small-side-portions-of-fresh-cilantro-sliced-white-onions-salsa-and-sour-cream-displayed-beside-the-quesadilla-to-indicate-they-are-available-as-accompaniments",
-      "title": "Replace the quesadilla menu card image (located at the card identified by XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[3]/article[4]/div[1]/div[1]) with a newly generated image showing: a lightly cooked (not fully browned), cheese-only quesadilla with no steam rising from it, plated alongside small side portions of fresh cilantro, sliced white onions, salsa, and sour cream displayed beside the quesadilla to indicate they are available as accompaniments.",
+      "id": "feature-update-the-header-tagline-bar-located-at-xpath-html-1-body-1-div-1-div-1-header-1-div-2-div-1-to-display-the-text-delicious-mexican-food-for-every-special-occasion-instead-of-the-current-tagline-text",
+      "title": "Update the header tagline bar (located at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[2]/div[1]) to display the text 'Delicious Mexican food for every special occasion' instead of the current tagline text.",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     },
     {
-      "id": "feature-add-a-short-creative-catchy-mexican-food-phrase-or-slogan-inside-the-site-header-header-tsx-to-make-it-feel-less-bland-for-example-a-witty-or-bold-statement-celebrating-mexican-cuisine-the-phrase-should-be-styled-to-complement-the-existing-header-design-without-disrupting-navigation-or-layout",
-      "title": "Add a short, creative, catchy Mexican food phrase or slogan inside the site header (Header.tsx) to make it feel less bland — for example a witty or bold statement celebrating Mexican cuisine. The phrase should be styled to complement the existing header design without disrupting navigation or layout.",
+      "id": "feature-fix-the-fixed-sticky-header-in-frontend-src-components-header-tsx-so-it-no-longer-overlaps-the-hero-section-image-the-hero-section-and-the-girl-image-must-be-fully-visible-and-not-obscured-by-the-header-adjust-the-hero-section-top-padding-or-offset-to-account-for-the-header-height-so-the-image-is-completely-visible-from-its-top-edge",
+      "title": "Fix the fixed/sticky header in frontend/src/components/Header.tsx so it no longer overlaps the hero section image. The hero section and the girl image must be fully visible and not obscured by the header. Adjust the hero section top padding or offset to account for the header height so the image is completely visible from its top edge.",
       "reqIds": [
         "REQ-2"
       ],
@@ -27,13 +28,13 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Update quesadilla image: no steam, less cooked appearance, cheese-only filling, with cilantro, sliced onions, salsa, and sour cream shown on the side",
+      "summary": "Fix header overlapping the girl image so the image is fully visible",
       "reqIds": [],
       "status": "pending"
     },
     {
       "id": "AR-2",
-      "summary": "Add a creative/catchy Mexican food phrase to the header to make it less bland",
+      "summary": "Update header text to say 'Delicious Mexican food for every special occasion'",
       "reqIds": [],
       "status": "pending"
     }

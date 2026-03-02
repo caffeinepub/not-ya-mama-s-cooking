@@ -1,40 +1,41 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update quesadilla image and add creative header phrase",
+  "title": "Fix header overlapping hero image and update header tagline text",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Replace the quesadilla menu card image with a newly generated image showing a lightly cooked cheese-only quesadilla with no steam, plated with side portions of cilantro, onions, salsa, and sour cream",
+      "summary": "Update the header tagline bar text to display 'Delicious Mexican food for every special occasion'",
       "acceptanceCriteria": [
-        "The quesadilla image shows no steam effects",
-        "The quesadilla appears lightly cooked / pale golden rather than deeply browned",
-        "Only cheese is visible as a filling inside the quesadilla",
-        "Cilantro, sliced onions, salsa, and sour cream are visible as side items in the image",
-        "The updated image is rendered in the quesadilla menu card"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/MenuSection.tsx",
-          "operation": "modify",
-          "description": "Update the quesadilla menu card's image source to reference the newly generated image at frontend/public/assets/generated/quesadilla-cheese-sides.dim_800x600.png. Locate the quesadilla card (the fourth menu item in the grid) and replace its current image path with the new asset path. Ensure the image is properly loaded and displayed in the card's image container without affecting other menu items (tacos, burritos, chips & salsa)."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Add a short, creative, catchy Mexican food phrase or slogan inside the site header to make it feel less bland, styled to complement the existing header design",
-      "acceptanceCriteria": [
-        "A creative Mexican food-themed phrase or slogan is visible in the header",
-        "The phrase is styled consistently with the existing header color palette and typography",
-        "Header navigation links and phone button remain fully functional and unobstructed",
-        "The phrase is legible on both desktop and mobile layouts"
+        "The tagline bar in the header displays exactly 'Delicious Mexican food for every special occasion'",
+        "No other header content or layout is changed"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/Header.tsx",
           "operation": "modify",
-          "description": "Add a creative, catchy Mexican food phrase or slogan to the header component. Position the phrase between the logo and navigation elements, or integrate it as a tagline near the logo. Use a creative phrase such as 'Bold Flavors, Zero Regrets' or 'Where Tradition Meets Your Taste Buds'. Style the phrase using the existing Mexican-palette color tokens (chili, gold, verde) from the Tailwind config, ensure it complements the header's typography and layout, and verify it remains legible and properly positioned on both desktop and mobile viewports without obstructing navigation links or the phone button. Ensure the phrase is hidden or repositioned appropriately in the mobile hamburger drawer if needed."
+          "description": "Update the tagline text in the header tagline bar (the div with className containing 'bg-chili-600 text-cream-50') from the current text to 'Delicious Mexican food for every special occasion'. Locate the <p> element inside the tagline bar and replace its text content."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Fix the fixed header so it no longer overlaps the hero section image, ensuring the girl image is fully visible",
+      "acceptanceCriteria": [
+        "The girl/hero image is fully visible and not covered by the header at any point on page load",
+        "The header remains functional (navigation, mobile menu) and visually consistent",
+        "The hero section content starts below the header, with no clipping of the hero image at the top"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Add top padding or margin to the hero section container to account for the fixed header height (approximately 128px total: 40px tagline bar + 88px main header). Ensure the hero background image and all content start below the header by adding appropriate spacing to the outermost container div. The background image positioning should be adjusted so the top of the image is visible below the header."
+        },
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Review the header's fixed positioning and z-index to ensure it sits above other content but does not visually obstruct the hero image. Verify that the header height calculations are correct and that the mobile menu behavior remains functional. No structural changes to navigation or layout are needed, only validation of positioning behavior."
         }
       ]
     }

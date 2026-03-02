@@ -1,67 +1,57 @@
 {
   "kind": "build_request",
-  "title": "Update quesadilla image and add creative header phrase",
+  "title": "Fix header overlapping hero image and update header tagline text",
   "projectName": "Not Ya Mama's Cooking",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Replace the quesadilla menu card image (located at the card identified by XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[3]/article[4]/div[1]/div[1]) with a newly generated image showing: a lightly cooked (not fully browned), cheese-only quesadilla with no steam rising from it, plated alongside small side portions of fresh cilantro, sliced white onions, salsa, and sour cream displayed beside the quesadilla to indicate they are available as accompaniments.",
+      "text": "Update the header tagline bar (located at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[2]/div[1]) to display the text 'Delicious Mexican food for every special occasion' instead of the current tagline text.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "I don't want there any steam coming off of the quesadilla",
-          "I want the quesadilla to be not cooked so much",
-          "I only want there to be cheese in the quesadilla in the image showing",
-          "on the sideshow, all the cilantro sliced onions, salsa, sour cream on the side to show that we offer that too"
+          "I want the header to say delicious Mexican food for every special occasion"
         ]
       },
       "acceptanceCriteria": [
-        "The quesadilla image shows no steam effects",
-        "The quesadilla appears lightly cooked / pale golden rather than deeply browned",
-        "Only cheese is visible as a filling inside the quesadilla",
-        "Cilantro, sliced onions, salsa, and sour cream are visible as side items in the image",
-        "The updated image is rendered in the quesadilla menu card"
+        "The tagline bar in the header displays exactly 'Delicious Mexican food for every special occasion'",
+        "No other header content or layout is changed"
       ]
     },
     {
       "id": "REQ-2",
-      "text": "Add a short, creative, catchy Mexican food phrase or slogan inside the site header (Header.tsx) to make it feel less bland — for example a witty or bold statement celebrating Mexican cuisine. The phrase should be styled to complement the existing header design without disrupting navigation or layout.",
+      "text": "Fix the fixed/sticky header in frontend/src/components/Header.tsx so it no longer overlaps the hero section image. The hero section and the girl image must be fully visible and not obscured by the header. Adjust the hero section top padding or offset to account for the header height so the image is completely visible from its top edge.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "can you add something creative to put on the header because it's kind of bland at the top right now that I want something that says a cool phrase about Mexican food on the header"
+          "The header is covering the image that you created. I don't want the header covering the image of the girl"
         ]
       },
       "acceptanceCriteria": [
-        "A creative Mexican food-themed phrase or slogan is visible in the header",
-        "The phrase is styled consistently with the existing header color palette and typography",
-        "Header navigation links and phone button remain fully functional and unobstructed",
-        "The phrase is legible on both desktop and mobile layouts"
+        "The girl/hero image is fully visible and not covered by the header at any point on page load",
+        "The header remains functional (navigation, mobile menu) and visually consistent",
+        "The hero section content starts below the header, with no clipping of the hero image at the top"
       ]
     }
   ],
   "constraints": [
-    "Do not alter any immutable frontend paths (useInternetIdentity, useActor, main.tsx, ui components)",
-    "Only the quesadilla menu card image should be replaced; other menu card images must remain unchanged",
-    "Changes to the header must not break existing navigation or mobile hamburger drawer behavior"
+    "Do not modify any files under frontend/src/hooks/",
+    "Do not modify frontend/src/main.tsx",
+    "Do not modify files under frontend/src/components/ui"
   ],
   "nonGoals": [
-    "Changes to other menu items (tacos, burritos, chips & salsa)",
-    "Adding new menu items or modifying menu item descriptions",
-    "Changes to the hero section background image",
-    "Backend changes"
+    "Redesigning the header layout or navigation structure",
+    "Changing any other section's content or styling",
+    "Adding new header navigation links"
   ],
   "imageRequirements": {
-    "required": [
-      "A lightly cooked pale-golden cheese quesadilla cut in half with no steam, served on a rustic plate with small side portions of fresh green cilantro, thinly sliced white onions, a small bowl of red salsa, and a dollop of sour cream arranged beside it on a warm wooden surface (quesadilla-cheese-sides.dim_800x600.png)"
-    ],
+    "required": [],
     "edits": []
   }
 }

@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-replace-the-quesadilla-menu-card-image-located-at-the-card-identified-by-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-1-div-3-article-4-div-1-div-1-with-a-newly-generated-image-showing-a-lightly-cooked-not-fully-browned-cheese-only-quesadilla-with-no-steam-rising-from-it-plated-alongside-small-side-portions-of-fresh-cilantro-sliced-white-onions-salsa-and-sour-cream-displayed-beside-the-quesadilla-to-indicate-they-are-available-as-accompaniments",
-      "featureTitle": "Replace the quesadilla menu card image (located at the card identified by XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[3]/article[4]/div[1]/div[1]) with a newly generated image showing: a lightly cooked (not fully browned), cheese-only quesadilla with no steam rising from it, plated alongside small side portions of fresh cilantro, sliced white onions, salsa, and sour cream displayed beside the quesadilla to indicate they are available as accompaniments.",
+      "featureId": "feature-update-the-header-tagline-bar-located-at-xpath-html-1-body-1-div-1-div-1-header-1-div-2-div-1-to-display-the-text-delicious-mexican-food-for-every-special-occasion-instead-of-the-current-tagline-text",
+      "featureTitle": "Update the header tagline bar (located at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[2]/div[1]) to display the text 'Delicious Mexican food for every special occasion' instead of the current tagline text.",
       "files": [
-        "frontend/src/components/MenuSection.tsx"
+        "frontend/src/components/Header.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -21,10 +21,11 @@
       "confidence": "high"
     },
     {
-      "featureId": "feature-add-a-short-creative-catchy-mexican-food-phrase-or-slogan-inside-the-site-header-header-tsx-to-make-it-feel-less-bland-for-example-a-witty-or-bold-statement-celebrating-mexican-cuisine-the-phrase-should-be-styled-to-complement-the-existing-header-design-without-disrupting-navigation-or-layout",
-      "featureTitle": "Add a short, creative, catchy Mexican food phrase or slogan inside the site header (Header.tsx) to make it feel less bland — for example a witty or bold statement celebrating Mexican cuisine. The phrase should be styled to complement the existing header design without disrupting navigation or layout.",
+      "featureId": "feature-fix-the-fixed-sticky-header-in-frontend-src-components-header-tsx-so-it-no-longer-overlaps-the-hero-section-image-the-hero-section-and-the-girl-image-must-be-fully-visible-and-not-obscured-by-the-header-adjust-the-hero-section-top-padding-or-offset-to-account-for-the-header-height-so-the-image-is-completely-visible-from-its-top-edge",
+      "featureTitle": "Fix the fixed/sticky header in frontend/src/components/Header.tsx so it no longer overlaps the hero section image. The hero section and the girl image must be fully visible and not obscured by the header. Adjust the hero section top padding or offset to account for the header height so the image is completely visible from its top edge.",
       "files": [
-        "frontend/src/components/Header.tsx"
+        "frontend/src/components/Header.tsx",
+        "frontend/src/components/HeroSection.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
