@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as a placeholder backend with no implemented logic.",
+  "feature_evidence.json": "Feature evidence report mapping implemented features (theme, logo, sticky header, hamburger menu, menu section, etc.) to their corresponding source files, components, and test IDs.",
+  "frontend-file-summaries.txt": "JSON document containing one-sentence summaries of each frontend source file, describing their purpose and key implementation details.",
+  "frontend/index.css": "Base Tailwind CSS file defining OKLCH CSS custom properties for light and dark theme tokens (background, foreground, primary, border, etc.).",
+  "frontend/index.html": "HTML entry point for the React app, setting the page title to 'Not Ya Mama's Cooking' and mounting the app at the #root div.",
+  "frontend/src/App.tsx": "Root React component that composes Header, HeroSection, MenuSection, CateringSection, ContactSection, and Footer into a single-page layout.",
+  "frontend/src/components/CateringSection.tsx": "Catering services section displaying event type offerings, a banner image, an included-items checklist, and a CTA button scrolling to the contact section.",
+  "frontend/src/components/ContactSection.tsx": "Contact section featuring Jasmine Cota's profile card with a clickable phone number, service area, and availability details styled with warm Mexican-inspired colors.",
+  "frontend/src/components/Footer.tsx": "Site footer with the business logo, quick navigation links, contact info (Jasmine Cota, phone, Phoenix AZ), copyright, and a 'Made with love in Phoenix, AZ' tagline.",
+  "frontend/src/components/Header.tsx": "Fixed navigation header with a logo, desktop nav links, phone number, and a hamburger mobile menu that hides on scroll-down and closes on outside click or Escape key.",
+  "frontend/src/components/HeroSection.tsx": "Full-screen hero section with a background image, logo, tagline, CTA buttons to explore the menu or book catering via phone, and a scroll-down indicator.",
+  "frontend/src/components/MenuSection.tsx": "Displays a grid of menu item cards (chicken tacos, beef tacos, burritos) with images, descriptions, ingredient badges, and signature dish labels.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and caches an ICP backend actor (anonymous or authenticated) using React Query, and invalidates dependent queries when the identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an InternetIdentityProvider and useInternetIdentity hook for managing DFINITY Internet Identity authentication state, including login, logout, and identity persistence.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder module with no exports, indicating no backend queries are needed for this static frontend.",
+  "frontend/src/hooks/useScrollDirection.ts": "Custom hook that tracks scroll direction (up/down/none), current scroll position, and whether the page is at the top, using requestAnimationFrame for performance.",
+  "frontend/src/index.css": "Global stylesheet importing Google Fonts and defining a Mexican-inspired OKLCH color palette via CSS variables for both light and dark themes, plus Tailwind utility classes for fonts, textures, and gradients.",
+  "frontend/src/main.tsx": "Application entry point that mounts the React app wrapped with QueryClientProvider and InternetIdentityProvider.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration for the frontend, extending the default theme with custom Mexican-inspired color palettes (chili, sienna, gold, verde, cream), custom fonts (Playfair Display, Dancing Script, Montserrat), box shadows, border radii, and animation keyframes. Includes plugins for typography, container queries, and animate.",
+  "project_state.json": "Project state descriptor (version 3) for 'Not Ya Mama's Cooking', a Mexican catering/restaurant website for Phoenix, AZ, documenting existing features, image requirements, architectural notes, and known issues for build planning."
+}

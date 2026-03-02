@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Montserrat:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Mexican-inspired warm palette */
+    --background: 0.98 0.01 80;
+    --foreground: 0.18 0.04 40;
+
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.04 40;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.04 40;
+
+    /* Deep chili red */
+    --primary: 0.48 0.19 28;
+    --primary-foreground: 0.98 0.01 80;
+
+    /* Earthy orange */
+    --secondary: 0.72 0.16 55;
+    --secondary-foreground: 0.18 0.04 40;
+
+    /* Golden yellow */
+    --accent: 0.82 0.17 85;
+    --accent-foreground: 0.18 0.04 40;
+
+    --muted: 0.94 0.03 70;
+    --muted-foreground: 0.45 0.05 50;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0.01 80;
+
+    --border: 0.88 0.04 60;
+    --input: 0.88 0.04 60;
+    --ring: 0.48 0.19 28;
+
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.145 0 0;
+    --sidebar-primary: 0.205 0 0;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.97 0 0;
+    --sidebar-accent-foreground: 0.205 0 0;
+    --sidebar-border: 0.922 0 0;
+    --sidebar-ring: 0.708 0 0;
+  }
+
+  .dark {
+    --background: 0.14 0.03 30;
+    --foreground: 0.96 0.02 80;
+
+    --card: 0.18 0.04 30;
+    --card-foreground: 0.96 0.02 80;
+
+    --popover: 0.22 0.04 30;
+    --popover-foreground: 0.96 0.02 80;
+
+    --primary: 0.72 0.16 55;
+    --primary-foreground: 0.14 0.03 30;
+
+    --secondary: 0.28 0.05 35;
+    --secondary-foreground: 0.96 0.02 80;
+
+    --accent: 0.82 0.17 85;
+    --accent-foreground: 0.14 0.03 30;
+
+    --muted: 0.24 0.04 35;
+    --muted-foreground: 0.65 0.05 60;
+
+    --destructive: 0.65 0.22 25;
+    --destructive-foreground: 0.96 0.02 80;
+
+    --border: 1 0 0 / 10%;
+    --input: 1 0 0 / 15%;
+    --ring: 0.72 0.16 55;
+
+    --sidebar: 0.205 0 0;
+    --sidebar-foreground: 0.985 0 0;
+    --sidebar-primary: 0.488 0.243 264.376;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.269 0 0;
+    --sidebar-accent-foreground: 0.985 0 0;
+    --sidebar-border: 1 0 0 / 10%;
+    --sidebar-ring: 0.439 0 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-script {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .font-body {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .text-shadow-warm {
+    text-shadow: 2px 2px 8px rgba(120, 40, 10, 0.4);
+  }
+
+  .bg-texture {
+    background-image:
+      radial-gradient(circle at 20% 50%, oklch(0.72 0.16 55 / 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, oklch(0.48 0.19 28 / 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 50% 80%, oklch(0.82 0.17 85 / 0.07) 0%, transparent 50%);
+  }
+
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.18 0.06 30 / 0.92) 0%,
+      oklch(0.28 0.08 35 / 0.85) 50%,
+      oklch(0.18 0.06 30 / 0.92) 100%
+    );
+  }
+
+  .section-divider {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      oklch(0.72 0.16 55),
+      oklch(0.82 0.17 85),
+      oklch(0.72 0.16 55),
+      transparent
+    );
+    height: 2px;
+  }
+}

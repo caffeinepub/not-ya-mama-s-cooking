@@ -1,0 +1,156 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-professional-visually-rich-single-page-website-for-not-ya-mama-s-cooking-a-mexican-catering-business-restaurant-serving-phoenix-arizona-the-overall-aesthetic-should-use-warm-vibrant-mexican-inspired-colors-deep-reds-earthy-oranges-golden-yellows-dark-greens-with-bold-typography-textured-backgrounds-and-a-festive-yet-upscale-restaurant-feel-apply-this-theme-consistently-across-all-sections",
+      "featureTitle": "Create a professional, visually rich single-page website for 'Not Ya Mama's Cooking', a Mexican catering business/restaurant serving Phoenix, Arizona. The overall aesthetic should use warm, vibrant Mexican-inspired colors (deep reds, earthy oranges, golden yellows, dark greens) with bold typography, textured backgrounds, and a festive yet upscale restaurant feel. Apply this theme consistently across all sections.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-display-the-generated-logo-logo-dim-400x400-png-prominently-in-the-header-hero-area-of-the-site",
+      "featureTitle": "Display the generated logo (logo.dim_400x400.png) prominently in the header/hero area of the site.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Header.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-sticky-header-that-automatically-hides-slides-up-off-screen-when-the-user-scrolls-down-and-reappears-when-the-user-scrolls-back-up",
+      "featureTitle": "Implement a sticky header that automatically hides (slides up/off screen) when the user scrolls down and reappears when the user scrolls back up.",
+      "files": [
+        "frontend/src/components/Header.tsx",
+        "frontend/src/hooks/useScrollDirection.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-hamburger-menu-icon-three-horizontal-lines-in-the-top-right-corner-of-the-header-clicking-it-opens-a-full-navigation-drawer-or-dropdown-listing-all-services-and-menu-items-street-tacos-chicken-beef-burritos-catering-services-the-menu-closes-when-the-user-clicks-outside-or-selects-an-item-and-it-scrolls-the-user-to-the-relevant-section",
+      "featureTitle": "Add a hamburger menu icon (three horizontal lines) in the top-right corner of the header. Clicking it opens a full navigation drawer or dropdown listing all services and menu items (Street Tacos — Chicken & Beef, Burritos, Catering Services). The menu closes when the user clicks outside or selects an item, and it scrolls the user to the relevant section.",
+      "files": [
+        "frontend/src/components/Header.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-dedicated-menu-food-showcase-section-that-prominently-features-1-chicken-street-tacos-2-beef-street-tacos-and-3-burritos-each-item-should-have-a-visually-appealing-card-with-a-title-a-short-appetizing-description-and-the-generated-food-image-street-tacos-should-be-highlighted-as-the-signature-featured-item",
+      "featureTitle": "Create a dedicated menu/food showcase section that prominently features: (1) Chicken Street Tacos, (2) Beef Street Tacos, and (3) Burritos. Each item should have a visually appealing card with a title, a short appetizing description, and the generated food image. Street tacos should be highlighted as the signature/featured item.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/MenuSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-catering-services-section-that-highlights-that-not-ya-mama-s-cooking-offers-catering-services-for-events-in-the-phoenix-arizona-area-include-a-list-of-catering-offerings-and-a-call-to-action-to-contact-jasmine-cota-for-bookings",
+      "featureTitle": "Create a catering services section that highlights that 'Not Ya Mama's Cooking' offers catering services for events in the Phoenix, Arizona area. Include a list of catering offerings and a call-to-action to contact Jasmine Cota for bookings.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/CateringSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-contact-section-displaying-contact-name-jasmine-cota-and-phone-number-480-091-4039-the-phone-number-should-be-a-clickable-tel-link-include-a-warm-inviting-message-encouraging-visitors-to-reach-out-for-catering-inquiries",
+      "featureTitle": "Add a contact section displaying: contact name 'Jasmine Cota' and phone number '(480) 091-4039'. The phone number should be a clickable tel: link. Include a warm, inviting message encouraging visitors to reach out for catering inquiries.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ContactSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-any-built-by-caffeine-ai-text-attribution-or-branding-from-the-website-footer-and-from-every-other-section-of-the-site",
+      "featureTitle": "Remove any 'Built by Caffeine AI' text, attribution, or branding from the website footer and from every other section of the site.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Footer.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

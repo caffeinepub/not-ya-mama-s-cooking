@@ -1,0 +1,180 @@
+{
+  "kind": "build_request",
+  "title": "Not Ya Mama's Cooking — Mexican Catering Restaurant Website",
+  "projectName": "Not Ya Mama's Cooking",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a professional, visually rich single-page website for 'Not Ya Mama's Cooking', a Mexican catering business/restaurant serving Phoenix, Arizona. The overall aesthetic should use warm, vibrant Mexican-inspired colors (deep reds, earthy oranges, golden yellows, dark greens) with bold typography, textured backgrounds, and a festive yet upscale restaurant feel. Apply this theme consistently across all sections.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "extremely professional looking",
+          "Mexican catering business/restaurant"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Warm Mexican-inspired color palette (deep reds, earthy oranges, golden yellows) is used consistently",
+        "Typography is bold and professional throughout",
+        "Overall design feels upscale yet festive"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Display the generated logo (logo.dim_400x400.png) prominently in the header/hero area of the site.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a cool logo with a Mexican lady cooking with cooking materials and an apron on"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Logo appears in the site header and/or hero section",
+        "Logo is rendered from frontend/public/assets/generated/logo.dim_400x400.png"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement a sticky header that automatically hides (slides up/off screen) when the user scrolls down and reappears when the user scrolls back up.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "the header going away when I scroll down"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header is visible at the top of the page on load",
+        "Header slides out of view when the user scrolls down",
+        "Header reappears smoothly when the user scrolls back up",
+        "Transition is smooth/animated"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add a hamburger menu icon (three horizontal lines) in the top-right corner of the header. Clicking it opens a full navigation drawer or dropdown listing all services and menu items (Street Tacos — Chicken & Beef, Burritos, Catering Services). The menu closes when the user clicks outside or selects an item, and it scrolls the user to the relevant section.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "icon tab at the top right corner with three lines with all the services and menu items"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hamburger icon (≡) is visible in the top-right corner of the header",
+        "Clicking the icon opens a navigation menu/drawer",
+        "Menu lists all services: Catering Services, Street Tacos (Chicken & Beef), Burritos",
+        "Clicking a menu item scrolls to the corresponding section",
+        "Menu closes on outside click or item selection"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create a dedicated menu/food showcase section that prominently features: (1) Chicken Street Tacos, (2) Beef Street Tacos, and (3) Burritos. Each item should have a visually appealing card with a title, a short appetizing description, and the generated food image. Street tacos should be highlighted as the signature/featured item.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "really showcase the street tacos that we sell with chicken and beef street tacos and burritos"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Section titled 'Our Menu' or equivalent is present",
+        "Chicken Street Tacos card is displayed with image and description",
+        "Beef Street Tacos card is displayed with image and description",
+        "Burritos card is displayed with image and description",
+        "Street tacos are visually emphasized (e.g., featured/larger card or 'signature dish' badge)",
+        "Food images are rendered from frontend/public/assets/generated/"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create a catering services section that highlights that 'Not Ya Mama's Cooking' offers catering services for events in the Phoenix, Arizona area. Include a list of catering offerings and a call-to-action to contact Jasmine Cota for bookings.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "show off that we cater for Phoenix Arizona area"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A 'Catering' or 'Catering Services' section is present",
+        "Phoenix, Arizona area is explicitly mentioned",
+        "A call-to-action (e.g., button or link) leads to the contact section"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Add a contact section displaying: contact name 'Jasmine Cota' and phone number '(480) 091-4039'. The phone number should be a clickable tel: link. Include a warm, inviting message encouraging visitors to reach out for catering inquiries.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Phone number is 4800914039 and the name for contact is Jasmine Cota"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact section displays name: Jasmine Cota",
+        "Contact section displays phone: (480) 091-4039 as a clickable tel: link",
+        "Section includes a friendly call-to-action message"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Remove any 'Built by Caffeine AI' text, attribution, or branding from the website footer and from every other section of the site.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Takeoff where it says built by caffeine AI at the bottom of the website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "No 'Built by Caffeine AI' text or attribution appears anywhere on the page",
+        "Footer only contains relevant business information"
+      ]
+    }
+  ],
+  "constraints": [
+    "Phone number must be rendered exactly as (480) 091-4039 and as a clickable tel: link",
+    "Contact name must be rendered exactly as Jasmine Cota",
+    "No 'Built by Caffeine AI' or any Caffeine AI branding anywhere on the site",
+    "No backend logic is required — this is a fully static frontend website"
+  ],
+  "nonGoals": [
+    "Online ordering or e-commerce functionality",
+    "User authentication or accounts",
+    "Backend database or API",
+    "Reservations booking system",
+    "Real-time features"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Vibrant illustrated logo featuring a smiling Mexican woman in a colorful floral apron, holding a wooden spoon and a skillet, surrounded by cooking ingredients like chili peppers, lime, and cilantro, with bold stylized text 'Not Ya Mama's Cooking' below, warm earthy tones (logo.dim_400x400.png)",
+      "Appetizing close-up photo-realistic illustration of two chicken street tacos on a rustic wooden board, topped with diced onion, cilantro, lime wedge, and salsa, warm lighting (chicken-tacos.dim_800x600.png)",
+      "Appetizing close-up photo-realistic illustration of two beef carne asada street tacos on a rustic wooden board, topped with diced onion, cilantro, lime wedge, and red salsa, warm lighting (beef-tacos.dim_800x600.png)",
+      "Appetizing close-up photo-realistic illustration of a large stuffed burrito wrapped in foil at the base, cross-section showing rice, beans, meat and cheese, served with salsa and guacamole on the side, warm lighting (burrito.dim_800x600.png)",
+      "Vibrant festive Mexican catering banner illustration showing a spread of tacos, burritos and colorful dishes on a decorated table with string lights and desert sunset background in warm oranges and reds (catering-banner.dim_1200x500.png)"
+    ],
+    "edits": []
+  }
+}
