@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, Flame } from 'lucide-react';
 import { useScrollDirection } from '../hooks/useScrollDirection';
 
 interface NavItem {
@@ -59,10 +59,24 @@ export function Header() {
         isHidden ? '-translate-y-full' : 'translate-y-0'
       } ${
         isAtTop
-          ? 'bg-transparent'
-          : 'bg-[oklch(0.14_0.04_30/0.97)] backdrop-blur-md shadow-warm'
+          ? 'bg-[oklch(0.12_0.05_28/0.85)] backdrop-blur-sm border-b border-gold/20'
+          : 'bg-[oklch(0.11_0.05_28)] backdrop-blur-md border-b border-gold/35 shadow-[0_4px_24px_oklch(0.08_0.04_28/0.8)]'
       }`}
     >
+      {/* Tagline bar */}
+      <div className="w-full bg-[oklch(0.48_0.19_28)] py-1.5 px-4 text-center">
+        <p className="font-script text-cream text-sm sm:text-base flex items-center justify-center gap-2 leading-tight">
+          <Flame size={14} className="text-gold fill-gold flex-shrink-0" />
+          <span>
+            Life's Too Short for Bland Food —{' '}
+            <span className="text-gold font-bold not-italic font-body text-xs sm:text-sm tracking-wide uppercase">
+              Eat Like You Mean It
+            </span>
+          </span>
+          <Flame size={14} className="text-gold fill-gold flex-shrink-0" />
+        </p>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -92,7 +106,7 @@ export function Header() {
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="px-4 py-2 text-cream/90 hover:text-gold-light font-body font-medium text-sm tracking-wide transition-colors duration-200 rounded-md hover:bg-white/5"
+                className="px-4 py-2 text-cream font-body font-semibold text-sm tracking-wide transition-colors duration-200 rounded-md hover:text-gold-light hover:bg-white/8 border border-transparent hover:border-gold/20"
               >
                 {item.label}
               </button>
@@ -103,7 +117,7 @@ export function Header() {
           <div className="flex items-center gap-3" ref={menuRef}>
             <a
               href="tel:4800914039"
-              className="hidden md:flex items-center gap-2 text-gold-light hover:text-gold font-body font-semibold text-sm transition-colors duration-200"
+              className="hidden md:flex items-center gap-2 text-gold font-body font-bold text-sm transition-colors duration-200 hover:text-gold-light border border-gold/30 rounded-lg px-3 py-1.5 hover:border-gold/60 hover:bg-white/5"
             >
               <Phone size={15} className="text-gold" />
               (480) 091-4039
@@ -114,7 +128,7 @@ export function Header() {
               onClick={() => setMenuOpen((prev) => !prev)}
               aria-label={menuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={menuOpen}
-              className="relative flex flex-col items-center justify-center w-11 h-11 rounded-lg border border-gold/30 bg-white/5 hover:bg-white/10 hover:border-gold/60 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gold/50"
+              className="relative flex flex-col items-center justify-center w-11 h-11 rounded-lg border border-gold/50 bg-white/8 hover:bg-white/15 hover:border-gold/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gold/50"
             >
               {menuOpen ? (
                 <X size={22} className="text-gold-light" />
@@ -125,32 +139,32 @@ export function Header() {
 
             {/* Dropdown Menu */}
             {menuOpen && (
-              <div className="absolute top-[calc(100%+8px)] right-4 w-72 bg-[oklch(0.16_0.05_30)] border border-gold/20 rounded-xl shadow-warm-lg overflow-hidden animate-fade-in-up">
+              <div className="absolute top-[calc(100%+4px)] right-4 w-72 bg-[oklch(0.13_0.05_28)] border border-gold/30 rounded-xl shadow-[0_8px_32px_oklch(0.08_0.04_28/0.9)] overflow-hidden animate-fade-in-up">
                 {/* Menu header */}
-                <div className="px-5 py-4 border-b border-gold/20 bg-[oklch(0.12_0.04_28)]">
+                <div className="px-5 py-4 border-b border-gold/25 bg-[oklch(0.10_0.04_28)]">
                   <p className="font-script text-gold-light text-lg">Our Menu & Services</p>
                   <p className="font-body text-cream/60 text-xs mt-0.5">Serving Phoenix, AZ</p>
                 </div>
 
                 {/* Nav items */}
                 <nav className="py-2">
-                  {navItems.map((item, idx) => (
+                  {navItems.map((item) => (
                     <button
                       key={item.href}
                       onClick={() => handleNavClick(item.href)}
-                      className="w-full text-left px-5 py-3 text-cream/85 hover:text-gold-light hover:bg-white/5 font-body font-medium text-sm tracking-wide transition-all duration-150 flex items-center gap-3 group"
+                      className="w-full text-left px-5 py-3 text-cream/90 hover:text-gold-light hover:bg-white/6 font-body font-semibold text-sm tracking-wide transition-all duration-150 flex items-center gap-3 group"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-gold/40 group-hover:bg-gold transition-colors duration-150 flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold/50 group-hover:bg-gold transition-colors duration-150 flex-shrink-0" />
                       {item.label}
                     </button>
                   ))}
                 </nav>
 
                 {/* Contact in menu */}
-                <div className="px-5 py-4 border-t border-gold/20 bg-[oklch(0.12_0.04_28)]">
+                <div className="px-5 py-4 border-t border-gold/25 bg-[oklch(0.10_0.04_28)]">
                   <a
                     href="tel:4800914039"
-                    className="flex items-center gap-2 text-gold-light hover:text-gold font-body font-semibold text-sm transition-colors duration-200"
+                    className="flex items-center gap-2 text-gold-light hover:text-gold font-body font-bold text-sm transition-colors duration-200"
                     onClick={() => setMenuOpen(false)}
                   >
                     <Phone size={14} />

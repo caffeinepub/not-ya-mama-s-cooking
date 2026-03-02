@@ -1,76 +1,25 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Professional website for 'Not Ya Mama's Cooking' — a Mexican catering business/restaurant serving the Phoenix, Arizona area. Features a logo with a Mexican lady cooking, collapsing header on scroll, hamburger menu (top right) with services and menu items, showcase of chicken & beef street tacos and burritos, contact info (Jasmine Cota, 480-091-4039), and no 'Built by Caffeine AI' footer credit.",
-  "architectural_notes": [
-    "Site name: Not Ya Mama's Cooking — Mexican catering/restaurant website",
-    "No footer attribution to Caffeine AI"
-  ],
+  "summary": "Mexican food website (quesadilla menu) with image and header customization in progress.",
+  "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Vibrant illustrated logo featuring a smiling Mexican woman in a colorful floral apron, holding a wooden spoon and a skillet, surrounded by cooking ingredients like chili peppers, lime, and cilantro, with bold stylized text 'Not Ya Mama's Cooking' below, warm earthy tones (logo.dim_400x400.png)\n- Appetizing close-up photo-realistic illustration of two chicken street tacos on a rustic wooden board, topped with diced onion, cilantro, lime wedge, and salsa, warm lighting (chicken-tacos.dim_800x600.png)\n- Appetizing close-up photo-realistic illustration of two beef carne asada street tacos on a rustic wooden board, topped with diced onion, cilantro, lime wedge, and red salsa, warm lighting (beef-tacos.dim_800x600.png)\n- Appetizing close-up photo-realistic illustration of a large stuffed burrito wrapped in foil at the base, cross-section showing rice, beans, meat and cheese, served with salsa and guacamole on the side, warm lighting (burrito.dim_800x600.png)\n- Vibrant festive Mexican catering banner illustration showing a spread of tacos, burritos and colorful dishes on a decorated table with string lights and desert sunset background in warm oranges and reds (catering-banner.dim_1200x500.png)",
+  "imageRequirements": "## Required Images\n- A lightly cooked pale-golden cheese quesadilla cut in half with no steam, served on a rustic plate with small side portions of fresh green cilantro, thinly sliced white onions, a small bowl of red salsa, and a dollop of sour cream arranged beside it on a warm wooden surface (quesadilla-cheese-sides.dim_800x600.png)",
   "existing_features": [
     {
-      "id": "feature-create-a-professional-visually-rich-single-page-website-for-not-ya-mama-s-cooking-a-mexican-catering-business-restaurant-serving-phoenix-arizona-the-overall-aesthetic-should-use-warm-vibrant-mexican-inspired-colors-deep-reds-earthy-oranges-golden-yellows-dark-greens-with-bold-typography-textured-backgrounds-and-a-festive-yet-upscale-restaurant-feel-apply-this-theme-consistently-across-all-sections",
-      "title": "Create a professional, visually rich single-page website for 'Not Ya Mama's Cooking', a Mexican catering business/restaurant serving Phoenix, Arizona. The overall aesthetic should use warm, vibrant Mexican-inspired colors (deep reds, earthy oranges, golden yellows, dark greens) with bold typography, textured backgrounds, and a festive yet upscale restaurant feel. Apply this theme consistently across all sections.",
+      "id": "feature-replace-the-quesadilla-menu-card-image-located-at-the-card-identified-by-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-1-div-3-article-4-div-1-div-1-with-a-newly-generated-image-showing-a-lightly-cooked-not-fully-browned-cheese-only-quesadilla-with-no-steam-rising-from-it-plated-alongside-small-side-portions-of-fresh-cilantro-sliced-white-onions-salsa-and-sour-cream-displayed-beside-the-quesadilla-to-indicate-they-are-available-as-accompaniments",
+      "title": "Replace the quesadilla menu card image (located at the card identified by XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[3]/article[4]/div[1]/div[1]) with a newly generated image showing: a lightly cooked (not fully browned), cheese-only quesadilla with no steam rising from it, plated alongside small side portions of fresh cilantro, sliced white onions, salsa, and sour cream displayed beside the quesadilla to indicate they are available as accompaniments.",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     },
     {
-      "id": "feature-display-the-generated-logo-logo-dim-400x400-png-prominently-in-the-header-hero-area-of-the-site",
-      "title": "Display the generated logo (logo.dim_400x400.png) prominently in the header/hero area of the site.",
+      "id": "feature-add-a-short-creative-catchy-mexican-food-phrase-or-slogan-inside-the-site-header-header-tsx-to-make-it-feel-less-bland-for-example-a-witty-or-bold-statement-celebrating-mexican-cuisine-the-phrase-should-be-styled-to-complement-the-existing-header-design-without-disrupting-navigation-or-layout",
+      "title": "Add a short, creative, catchy Mexican food phrase or slogan inside the site header (Header.tsx) to make it feel less bland — for example a witty or bold statement celebrating Mexican cuisine. The phrase should be styled to complement the existing header design without disrupting navigation or layout.",
       "reqIds": [
         "REQ-2"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-implement-a-sticky-header-that-automatically-hides-slides-up-off-screen-when-the-user-scrolls-down-and-reappears-when-the-user-scrolls-back-up",
-      "title": "Implement a sticky header that automatically hides (slides up/off screen) when the user scrolls down and reappears when the user scrolls back up.",
-      "reqIds": [
-        "REQ-3"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-a-hamburger-menu-icon-three-horizontal-lines-in-the-top-right-corner-of-the-header-clicking-it-opens-a-full-navigation-drawer-or-dropdown-listing-all-services-and-menu-items-street-tacos-chicken-beef-burritos-catering-services-the-menu-closes-when-the-user-clicks-outside-or-selects-an-item-and-it-scrolls-the-user-to-the-relevant-section",
-      "title": "Add a hamburger menu icon (three horizontal lines) in the top-right corner of the header. Clicking it opens a full navigation drawer or dropdown listing all services and menu items (Street Tacos — Chicken & Beef, Burritos, Catering Services). The menu closes when the user clicks outside or selects an item, and it scrolls the user to the relevant section.",
-      "reqIds": [
-        "REQ-4"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-create-a-dedicated-menu-food-showcase-section-that-prominently-features-1-chicken-street-tacos-2-beef-street-tacos-and-3-burritos-each-item-should-have-a-visually-appealing-card-with-a-title-a-short-appetizing-description-and-the-generated-food-image-street-tacos-should-be-highlighted-as-the-signature-featured-item",
-      "title": "Create a dedicated menu/food showcase section that prominently features: (1) Chicken Street Tacos, (2) Beef Street Tacos, and (3) Burritos. Each item should have a visually appealing card with a title, a short appetizing description, and the generated food image. Street tacos should be highlighted as the signature/featured item.",
-      "reqIds": [
-        "REQ-5"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-create-a-catering-services-section-that-highlights-that-not-ya-mama-s-cooking-offers-catering-services-for-events-in-the-phoenix-arizona-area-include-a-list-of-catering-offerings-and-a-call-to-action-to-contact-jasmine-cota-for-bookings",
-      "title": "Create a catering services section that highlights that 'Not Ya Mama's Cooking' offers catering services for events in the Phoenix, Arizona area. Include a list of catering offerings and a call-to-action to contact Jasmine Cota for bookings.",
-      "reqIds": [
-        "REQ-6"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-a-contact-section-displaying-contact-name-jasmine-cota-and-phone-number-480-091-4039-the-phone-number-should-be-a-clickable-tel-link-include-a-warm-inviting-message-encouraging-visitors-to-reach-out-for-catering-inquiries",
-      "title": "Add a contact section displaying: contact name 'Jasmine Cota' and phone number '(480) 091-4039'. The phone number should be a clickable tel: link. Include a warm, inviting message encouraging visitors to reach out for catering inquiries.",
-      "reqIds": [
-        "REQ-7"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-remove-any-built-by-caffeine-ai-text-attribution-or-branding-from-the-website-footer-and-from-every-other-section-of-the-site",
-      "title": "Remove any 'Built by Caffeine AI' text, attribution, or branding from the website footer and from every other section of the site.",
-      "reqIds": [
-        "REQ-8"
       ],
       "version": 1
     }
@@ -78,43 +27,13 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Cool logo with Mexican lady cooking, wearing apron, with cooking materials",
+      "summary": "Update quesadilla image: no steam, less cooked appearance, cheese-only filling, with cilantro, sliced onions, salsa, and sour cream shown on the side",
       "reqIds": [],
       "status": "pending"
     },
     {
       "id": "AR-2",
-      "summary": "Header hides/collapses on scroll down",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-3",
-      "summary": "Hamburger menu icon (top right, 3 lines) with all services and menu items",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-4",
-      "summary": "Showcase street tacos (chicken & beef) and burritos prominently",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-5",
-      "summary": "Highlight catering services for Phoenix Arizona area",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-6",
-      "summary": "Contact section with Jasmine Cota and phone 480-091-4039",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-7",
-      "summary": "Remove 'Built by Caffeine AI' from footer",
+      "summary": "Add a creative/catchy Mexican food phrase to the header to make it less bland",
       "reqIds": [],
       "status": "pending"
     }

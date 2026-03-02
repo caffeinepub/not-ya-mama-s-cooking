@@ -9,6 +9,7 @@ interface MenuItem {
   badge?: string;
   isSignature?: boolean;
   details: string[];
+  choices?: { label: string; emoji: string }[];
 }
 
 const menuItems: MenuItem[] = [
@@ -39,6 +40,27 @@ const menuItems: MenuItem[] = [
       'A hearty flour tortilla packed with seasoned rice, refried beans, your choice of chicken or beef, melted cheese, sour cream, and fresh guacamole. A full meal in every bite.',
     image: '/assets/generated/burrito.dim_800x600.png',
     details: ['Flour tortilla', 'Seasoned rice & beans', 'Choice of protein', 'Melted cheese', 'Guacamole & sour cream'],
+  },
+  {
+    id: 'quesadillas',
+    name: 'Quesadillas',
+    description:
+      'Lightly toasted flour tortillas filled with gooey melted cheese. Served with fresh cilantro, sliced onions, house salsa, and cool sour cream on the side.',
+    image: '/assets/generated/quesadilla-cheese-sides.dim_800x600.png',
+    details: ['Flour tortilla', 'Melted cheese blend', 'Cilantro & sliced onions', 'House salsa', 'Sour cream'],
+    choices: [
+      { label: 'Cheese', emoji: '🧀' },
+      { label: 'Chicken', emoji: '🐔' },
+      { label: 'Steak', emoji: '🥩' },
+    ],
+  },
+  {
+    id: 'chips-salsa',
+    name: 'Chips & Salsa',
+    description:
+      'Crispy, house-made tortilla chips served alongside our vibrant, freshly prepared salsa — bursting with ripe tomatoes, jalapeño, cilantro, and a hint of lime. The perfect starter.',
+    image: '/assets/generated/chips-salsa-menu.dim_600x400.png',
+    details: ['House tortilla chips', 'Fresh tomato salsa', 'Jalapeño', 'Cilantro', 'Lime'],
   },
 ];
 
@@ -72,6 +94,26 @@ function MenuCard({ item }: { item: MenuItem }) {
       {/* Content */}
       <div className="p-6">
         <h3 className="font-display text-2xl font-bold text-foreground mb-2">{item.name}</h3>
+
+        {/* Choice selector label for quesadillas */}
+        {item.choices && (
+          <div className="flex items-center gap-2 mb-3">
+            <span className="font-body text-xs font-bold text-[oklch(0.72_0.16_55)] uppercase tracking-wider">
+              Choose your filling:
+            </span>
+            <div className="flex gap-1.5">
+              {item.choices.map((choice) => (
+                <span
+                  key={choice.label}
+                  className="px-2 py-0.5 bg-[oklch(0.48_0.19_28)] text-cream font-body text-xs font-semibold rounded-full"
+                >
+                  {choice.emoji} {choice.label}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
         <p className="font-body text-muted-foreground text-sm leading-relaxed mb-4">
           {item.description}
         </p>

@@ -53,7 +53,7 @@ export function HeroSection() {
 
         {/* Tagline */}
         <p className="font-script text-gold-light text-2xl sm:text-3xl mb-3 drop-shadow">
-          Authentic Mexican Flavors
+          Authentic Mexican Food Catering & Restaurant
         </p>
 
         {/* Main title */}

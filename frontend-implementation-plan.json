@@ -1,177 +1,40 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Not Ya Mama's Cooking — Mexican Catering Restaurant Website",
+  "title": "Update quesadilla image and add creative header phrase",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Apply a professional Mexican-inspired theme with warm vibrant colors (deep reds, earthy oranges, golden yellows, dark greens), bold typography, textured backgrounds, and a festive yet upscale restaurant aesthetic consistently across all sections",
+      "summary": "Replace the quesadilla menu card image with a newly generated image showing a lightly cooked cheese-only quesadilla with no steam, plated with side portions of cilantro, onions, salsa, and sour cream",
       "acceptanceCriteria": [
-        "Warm Mexican-inspired color palette (deep reds, earthy oranges, golden yellows) is used consistently",
-        "Typography is bold and professional throughout",
-        "Overall design feels upscale yet festive"
+        "The quesadilla image shows no steam effects",
+        "The quesadilla appears lightly cooked / pale golden rather than deeply browned",
+        "Only cheese is visible as a filling inside the quesadilla",
+        "Cilantro, sliced onions, salsa, and sour cream are visible as side items in the image",
+        "The updated image is rendered in the quesadilla menu card"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/index.css",
+          "path": "frontend/src/components/MenuSection.tsx",
           "operation": "modify",
-          "description": "Define custom CSS variables for the Mexican-inspired color palette (deep reds, earthy oranges, golden yellows, dark greens) and apply global typography styles with bold font weights and festive yet professional character"
-        },
-        {
-          "path": "frontend/tailwind.config.js",
-          "operation": "modify",
-          "description": "Extend Tailwind theme with custom colors matching the Mexican palette (warmRed, earthyOrange, goldenYellow, darkGreen), configure bold font family variants, and add textured background utilities"
+          "description": "Update the quesadilla menu card's image source to reference the newly generated image at frontend/public/assets/generated/quesadilla-cheese-sides.dim_800x600.png. Locate the quesadilla card (the fourth menu item in the grid) and replace its current image path with the new asset path. Ensure the image is properly loaded and displayed in the card's image container without affecting other menu items (tacos, burritos, chips & salsa)."
         }
       ]
     },
     {
       "id": "REQ-2",
-      "summary": "Display the generated logo prominently in the header/hero area using the file frontend/public/assets/generated/logo.dim_400x400.png",
+      "summary": "Add a short, creative, catchy Mexican food phrase or slogan inside the site header to make it feel less bland, styled to complement the existing header design",
       "acceptanceCriteria": [
-        "Logo appears in the site header and/or hero section",
-        "Logo is rendered from frontend/public/assets/generated/logo.dim_400x400.png"
+        "A creative Mexican food-themed phrase or slogan is visible in the header",
+        "The phrase is styled consistently with the existing header color palette and typography",
+        "Header navigation links and phone button remain fully functional and unobstructed",
+        "The phrase is legible on both desktop and mobile layouts"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/Header.tsx",
-          "operation": "create",
-          "description": "Create a Header component that displays the logo from frontend/public/assets/generated/logo.dim_400x400.png prominently in the header area with appropriate sizing and positioning"
-        },
-        {
-          "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Import and render the Header component at the top of the application layout"
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Implement a sticky header that automatically hides when scrolling down and reappears when scrolling up with smooth animations",
-      "acceptanceCriteria": [
-        "Header is visible at the top of the page on load",
-        "Header slides out of view when the user scrolls down",
-        "Header reappears smoothly when the user scrolls back up",
-        "Transition is smooth/animated"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/hooks/useScrollDirection.ts",
-          "operation": "create",
-          "description": "Create a custom React hook that detects scroll direction (up/down) and returns the current direction state for controlling header visibility"
-        },
-        {
-          "path": "frontend/src/components/Header.tsx",
-          "operation": "modify",
-          "description": "Integrate the useScrollDirection hook to toggle header visibility with smooth CSS transitions (transform: translateY) based on scroll direction, making it sticky and auto-hiding"
-        }
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "summary": "Add a hamburger menu icon in the top-right corner that opens a navigation drawer listing all services (Catering Services, Street Tacos — Chicken & Beef, Burritos) with smooth scroll-to-section and close-on-click behavior",
-      "acceptanceCriteria": [
-        "Hamburger icon (≡) is visible in the top-right corner of the header",
-        "Clicking the icon opens a navigation menu/drawer",
-        "Menu lists all services: Catering Services, Street Tacos (Chicken & Beef), Burritos",
-        "Clicking a menu item scrolls to the corresponding section",
-        "Menu closes on outside click or item selection"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/MobileMenu.tsx",
-          "operation": "create",
-          "description": "Create a MobileMenu component with a hamburger icon button (three horizontal lines) that toggles a navigation drawer/dropdown, listing navigation links (Catering Services, Street Tacos, Burritos), implementing smooth scroll-to-section on click and close-on-outside-click behavior"
-        },
-        {
-          "path": "frontend/src/components/Header.tsx",
-          "operation": "modify",
-          "description": "Integrate the MobileMenu component in the top-right corner of the Header"
-        }
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "summary": "Create a menu/food showcase section featuring Chicken Street Tacos, Beef Street Tacos, and Burritos with cards containing titles, descriptions, and generated food images, emphasizing street tacos as the signature item",
-      "acceptanceCriteria": [
-        "Section titled 'Our Menu' or equivalent is present",
-        "Chicken Street Tacos card is displayed with image and description",
-        "Beef Street Tacos card is displayed with image and description",
-        "Burritos card is displayed with image and description",
-        "Street tacos are visually emphasized (e.g., featured/larger card or 'signature dish' badge)",
-        "Food images are rendered from frontend/public/assets/generated/"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/MenuSection.tsx",
-          "operation": "create",
-          "description": "Create a MenuSection component displaying an 'Our Menu' heading and three menu item cards: (1) Chicken Street Tacos using frontend/public/assets/generated/chicken-tacos.dim_800x600.png, (2) Beef Street Tacos using frontend/public/assets/generated/beef-tacos.dim_800x600.png, (3) Burritos using frontend/public/assets/generated/burrito.dim_800x600.png. Each card includes a title, appetizing description, and image. Visually emphasize street tacos as signature items with larger cards or a 'Signature Dish' badge"
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the MenuSection component with an appropriate section ID for scroll-to navigation"
-        }
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "summary": "Create a catering services section highlighting catering for events in the Phoenix, Arizona area with a list of offerings and a call-to-action to contact for bookings",
-      "acceptanceCriteria": [
-        "A 'Catering' or 'Catering Services' section is present",
-        "Phoenix, Arizona area is explicitly mentioned",
-        "A call-to-action (e.g., button or link) leads to the contact section"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/CateringSection.tsx",
-          "operation": "create",
-          "description": "Create a CateringSection component with a 'Catering Services' heading, highlighting that Not Ya Mama's Cooking offers catering for events in the Phoenix, Arizona area. Include a description of catering offerings and use the banner image from frontend/public/assets/generated/catering-banner.dim_1200x500.png. Add a call-to-action button that scrolls to the contact section"
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the CateringSection component with an appropriate section ID for scroll-to navigation"
-        }
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "summary": "Add a contact section displaying Jasmine Cota as the contact name and (480) 091-4039 as a clickable tel: link with a warm inviting message encouraging catering inquiries",
-      "acceptanceCriteria": [
-        "Contact section displays name: Jasmine Cota",
-        "Contact section displays phone: (480) 091-4039 as a clickable tel: link",
-        "Section includes a friendly call-to-action message"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/ContactSection.tsx",
-          "operation": "create",
-          "description": "Create a ContactSection component displaying the contact name 'Jasmine Cota' and phone number '(480) 091-4039' as a clickable tel: link (tel:4800914039). Include a warm, inviting message encouraging visitors to reach out for catering inquiries"
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the ContactSection component with an appropriate section ID for scroll-to navigation"
-        }
-      ]
-    },
-    {
-      "id": "REQ-8",
-      "summary": "Remove all 'Built by Caffeine AI' text, attribution, or branding from the footer and every other section of the site",
-      "acceptanceCriteria": [
-        "No 'Built by Caffeine AI' text or attribution appears anywhere on the page",
-        "Footer only contains relevant business information"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "create",
-          "description": "Create a Footer component containing only relevant business information (business name, copyright) with no 'Built by Caffeine AI' or any Caffeine AI branding"
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the Footer component at the bottom of the application layout, ensuring no Caffeine AI attribution appears anywhere in the main app structure"
+          "description": "Add a creative, catchy Mexican food phrase or slogan to the header component. Position the phrase between the logo and navigation elements, or integrate it as a tagline near the logo. Use a creative phrase such as 'Bold Flavors, Zero Regrets' or 'Where Tradition Meets Your Taste Buds'. Style the phrase using the existing Mexican-palette color tokens (chili, gold, verde) from the Tailwind config, ensure it complements the header's typography and layout, and verify it remains legible and properly positioned on both desktop and mobile viewports without obstructing navigation links or the phone button. Ensure the phrase is hidden or repositioned appropriately in the mobile hamburger drawer if needed."
         }
       ]
     }
