@@ -1,93 +1,58 @@
 {
   "kind": "build_request",
-  "title": "Consolidate header into single unified bar with proper spacing",
+  "title": "Extend hero image to top of page and add scroll-hiding 'Delicious Mexican Food' header text",
   "projectName": "Not Ya Mama's Cooking",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Merge the two separate header sections (tagline bar and navigation bar) into a single unified, cohesive header bar. All existing content must be preserved: the icon/logo, the tagline text (the span at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/p[1]/span[1]), navigation links, and any other current header elements. The result must appear as one header strip, not two stacked rows.",
+      "text": "Extend the hero section image so it fills the full viewport from the very top of the page (y=0), removing any top offset or gap caused by the sticky header. The hero image must visually bleed behind the header so there is no white space or padding between the top of the viewport and the image.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "I just need it to be all in one head or not two Shepherd spots the way it is",
-          "I like everything that's set on the header and I like the icon and I like the image. Keep all that on there"
+          "The homepage picture that has the image I need that picture to go all the way to the top of the website"
         ]
       },
       "acceptanceCriteria": [
-        "The header renders as a single horizontal bar with no visible second bar or sub-bar",
-        "The logo/icon, tagline text, and navigation links are all present in the unified header",
-        "The header does not visually appear as two separate sections"
+        "The hero/banner image starts at the very top edge of the browser window with no gap or offset.",
+        "No white or colored space appears between the top of the viewport and the hero image.",
+        "The image extends behind the header on load."
       ]
     },
     {
       "id": "REQ-2",
-      "text": "Ensure the unified header does not overlap or block any page content below it. The hero section (and all other content) must start below the header with adequate clearance so nothing is hidden behind the header bar.",
+      "text": "Update the Header component so that the tagline text reads exactly 'Delicious Mexican Food' (visible while the header is shown) and the header hides/disappears when the user scrolls down, reappearing when the user scrolls back up. All other header content (logo, nav links, phone number, hamburger menu) must remain unchanged.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "make the header fit better on the website don't block anything"
+          "make sure to put the words (delicious Mexican food) on the header that goes away when I scroll down",
+          "keep everything else the same"
         ]
       },
       "acceptanceCriteria": [
-        "No page content is visually hidden or overlapped by the header",
-        "The hero section begins below the full height of the header with visible separation"
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "text": "Retain the existing hide-on-scroll-down behavior for the unified header. The header should slide out of view when the user scrolls down and reappear when scrolling back up, exactly as currently implemented via the useScrollDirection hook.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "have the header go away when I scroll down the same that it is"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The header hides (slides up or fades out) when the user scrolls down",
-        "The header reappears when the user scrolls up",
-        "Behavior matches the existing scroll-direction logic"
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "text": "Add sufficient top margin or padding-top to the hero section so that the hero image is not too close to the header. There should be a comfortable visual gap between the bottom of the unified header and the top of the hero image.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "the image was a little too close to the header"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The hero image has a noticeable gap below the header and does not feel cramped against it",
-        "The spacing looks intentional and consistent with the site's visual style"
+        "The header displays the text 'Delicious Mexican Food' as the tagline while visible.",
+        "The header slides out of view (upward) when the user scrolls down.",
+        "The header reappears when the user scrolls back up.",
+        "All other header elements (logo, navigation, phone number) remain unchanged.",
+        "The scroll-hide behavior uses the existing useScrollDirection hook."
       ]
     }
   ],
   "constraints": [
-    "Do not remove or replace the logo/icon in the header",
-    "Do not remove or change the tagline text content in the header",
-    "Do not remove existing navigation links from the header",
-    "Keep all other page sections (Hero, Menu, Catering, Contact, Footer) unchanged",
-    "Do not modify files in frontend/src/hooks/"
+    "Do not change any section other than HeroSection and Header.",
+    "Do not modify files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or frontend/src/components/ui.",
+    "Keep all existing header elements (logo, nav links, phone number, hamburger menu) intact."
   ],
   "nonGoals": [
-    "Changing the header's color scheme or typography",
-    "Adding new navigation items or header functionality",
-    "Modifying any section other than the header and hero top spacing",
-    "Redesigning the hero section content"
+    "Redesigning any section other than the hero image positioning and header tagline.",
+    "Changing the menu, catering, contact, or footer sections.",
+    "Adding new navigation items or changing the header layout beyond the tagline text update."
   ],
   "imageRequirements": {
     "required": [],

@@ -1,72 +1,39 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Consolidate header into single unified bar with proper spacing",
+  "title": "Extend hero image to top of page and add scroll-hiding 'Delicious Mexican Food' header text",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Merge the two separate header sections (tagline bar and navigation bar) into a single unified, cohesive header bar preserving all existing content",
+      "summary": "Extend the hero section image to fill the full viewport from y=0, removing any top offset or gap caused by the sticky header",
       "acceptanceCriteria": [
-        "The header renders as a single horizontal bar with no visible second bar or sub-bar",
-        "The logo/icon, tagline text, and navigation links are all present in the unified header",
-        "The header does not visually appear as two separate sections"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Header.tsx",
-          "operation": "modify",
-          "description": "Restructure the Header component to render as a single unified bar instead of two stacked sections. Combine the tagline bar (with logo and tagline text) and navigation bar into one horizontal container. Preserve the logo, tagline span text, desktop navigation links, and mobile hamburger menu. Keep the existing useScrollDirection hook integration and className-based hide/show behavior. Ensure all elements are arranged horizontally with proper spacing using flexbox or grid layout."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Ensure the unified header does not overlap or block any page content below it",
-      "acceptanceCriteria": [
-        "No page content is visually hidden or overlapped by the header",
-        "The hero section begins below the full height of the header with visible separation"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Header.tsx",
-          "operation": "modify",
-          "description": "Review and adjust the header's positioning strategy to prevent content overlap. If the header uses fixed or sticky positioning, ensure the body or main container has adequate top padding or margin to account for the header's height. Add appropriate spacing utilities or inline styles to push content below the header bar."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Add top padding or margin to the main content container (or directly to the HeroSection wrapper) to provide clearance below the header. Ensure the spacing accounts for the unified header's full height so no content is hidden behind it when the page loads."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Retain the existing hide-on-scroll-down behavior for the unified header",
-      "acceptanceCriteria": [
-        "The header hides (slides up or fades out) when the user scrolls down",
-        "The header reappears when the user scrolls up",
-        "Behavior matches the existing scroll-direction logic"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Header.tsx",
-          "operation": "modify",
-          "description": "Verify that the unified header layout preserves the existing useScrollDirection hook integration. Ensure the conditional className logic that applies hide/show transitions based on scroll direction remains intact after restructuring the header. Test that the scroll behavior (hiding on scroll-down, reappearing on scroll-up) works seamlessly with the new single-bar layout."
-        }
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "summary": "Add sufficient top margin or padding-top to the hero section so the hero image is not too close to the header",
-      "acceptanceCriteria": [
-        "The hero image has a noticeable gap below the header and does not feel cramped against it",
-        "The spacing looks intentional and consistent with the site's visual style"
+        "The hero/banner image starts at the very top edge of the browser window with no gap or offset.",
+        "No white or colored space appears between the top of the viewport and the hero image.",
+        "The image extends behind the header on load."
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Add top padding or margin to the HeroSection component to create a comfortable visual gap between the bottom of the unified header and the top of the hero image. Use Tailwind spacing utilities (e.g., pt-24, pt-32, or custom values) to ensure the hero content does not feel cramped against the header. The spacing should feel intentional and match the site's overall design aesthetic."
+          "description": "Remove top padding/margin from the hero container and adjust positioning to ensure the background image starts at y=0. Update the container styling to use absolute positioning or negative margin to extend behind the header. Ensure the hero section height accounts for content visibility while the image bleeds to the viewport top."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Update the Header component to display 'Delicious Mexican Food' as the tagline and implement scroll-hide behavior",
+      "acceptanceCriteria": [
+        "The header displays the text 'Delicious Mexican Food' as the tagline while visible.",
+        "The header slides out of view (upward) when the user scrolls down.",
+        "The header reappears when the user scrolls back up.",
+        "All other header elements (logo, navigation, phone number) remain unchanged.",
+        "The scroll-hide behavior uses the existing useScrollDirection hook."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Change the tagline text from 'Delicious Mexican food for every special occasion!' to 'Delicious Mexican Food'. Import and use the useScrollDirection hook to track scroll direction. Add conditional CSS transform (translateY) to hide the header when scrolling down and show it when scrolling up. Apply smooth transition for the hide/show animation. Keep all existing header elements (logo, nav links, phone number, hamburger menu) unchanged."
         }
       ]
     }

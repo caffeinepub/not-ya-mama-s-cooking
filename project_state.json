@@ -1,54 +1,44 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Mexican food catering website with a hero image, icon, and auto-hiding header on scroll. User is iterating on header layout to consolidate it into a single cohesive bar that doesn't overlap content, hides on scroll, and has proper spacing from the hero image.",
-  "architectural_notes": [
-    "Header should hide on scroll (scroll-away behavior already implemented)",
-    "Header must be a single consolidated bar (no double/split header sections)",
-    "Hero image should have adequate top spacing so it is not too close to the header"
-  ],
-  "known_issues": [
-    "Header appears as two separate sections instead of one unified header bar",
-    "Hero image is positioned too close to the header, causing overlap or tight spacing"
-  ],
-  "isFixRequest": true,
+  "summary": "Mexican food website with a full-bleed hero image extending to the top of the page and a scrollable header displaying 'Delicious Mexican Food'.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-merge-the-two-separate-header-sections-tagline-bar-and-navigation-bar-into-a-single-unified-cohesive-header-bar-all-existing-content-must-be-preserved-the-icon-logo-the-tagline-text-the-span-at-xpath-html-1-body-1-div-1-div-1-header-1-div-1-p-1-span-1-navigation-links-and-any-other-current-header-elements-the-result-must-appear-as-one-header-strip-not-two-stacked-rows",
-      "title": "Merge the two separate header sections (tagline bar and navigation bar) into a single unified, cohesive header bar. All existing content must be preserved: the icon/logo, the tagline text (the span at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/p[1]/span[1]), navigation links, and any other current header elements. The result must appear as one header strip, not two stacked rows.",
+      "id": "feature-extend-the-hero-section-image-so-it-fills-the-full-viewport-from-the-very-top-of-the-page-y-0-removing-any-top-offset-or-gap-caused-by-the-sticky-header-the-hero-image-must-visually-bleed-behind-the-header-so-there-is-no-white-space-or-padding-between-the-top-of-the-viewport-and-the-image",
+      "title": "Extend the hero section image so it fills the full viewport from the very top of the page (y=0), removing any top offset or gap caused by the sticky header. The hero image must visually bleed behind the header so there is no white space or padding between the top of the viewport and the image.",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     },
     {
-      "id": "feature-ensure-the-unified-header-does-not-overlap-or-block-any-page-content-below-it-the-hero-section-and-all-other-content-must-start-below-the-header-with-adequate-clearance-so-nothing-is-hidden-behind-the-header-bar",
-      "title": "Ensure the unified header does not overlap or block any page content below it. The hero section (and all other content) must start below the header with adequate clearance so nothing is hidden behind the header bar.",
+      "id": "feature-update-the-header-component-so-that-the-tagline-text-reads-exactly-delicious-mexican-food-visible-while-the-header-is-shown-and-the-header-hides-disappears-when-the-user-scrolls-down-reappearing-when-the-user-scrolls-back-up-all-other-header-content-logo-nav-links-phone-number-hamburger-menu-must-remain-unchanged",
+      "title": "Update the Header component so that the tagline text reads exactly 'Delicious Mexican Food' (visible while the header is shown) and the header hides/disappears when the user scrolls down, reappearing when the user scrolls back up. All other header content (logo, nav links, phone number, hamburger menu) must remain unchanged.",
       "reqIds": [
         "REQ-2"
       ],
       "version": 1
-    },
-    {
-      "id": "feature-retain-the-existing-hide-on-scroll-down-behavior-for-the-unified-header-the-header-should-slide-out-of-view-when-the-user-scrolls-down-and-reappear-when-scrolling-back-up-exactly-as-currently-implemented-via-the-usescrolldirection-hook",
-      "title": "Retain the existing hide-on-scroll-down behavior for the unified header. The header should slide out of view when the user scrolls down and reappear when scrolling back up, exactly as currently implemented via the useScrollDirection hook.",
-      "reqIds": [
-        "REQ-3"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-sufficient-top-margin-or-padding-top-to-the-hero-section-so-that-the-hero-image-is-not-too-close-to-the-header-there-should-be-a-comfortable-visual-gap-between-the-bottom-of-the-unified-header-and-the-top-of-the-hero-image",
-      "title": "Add sufficient top margin or padding-top to the hero section so that the hero image is not too close to the header. There should be a comfortable visual gap between the bottom of the unified header and the top of the hero image.",
-      "reqIds": [
-        "REQ-4"
-      ],
-      "version": 1
     }
   ],
-  "new_feature_requests": [],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Hero image extends full bleed to the very top of the page",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Header displays 'Delicious Mexican Food' text and disappears when scrolling down",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
   "gameProjectType": "none",
-  "projectName": "Not Ya Mama's Cooking",
+  "projectName": "Delicious Mexican Food Website",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

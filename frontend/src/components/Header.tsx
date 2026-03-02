@@ -59,7 +59,7 @@ export function Header() {
         isHidden ? '-translate-y-full' : 'translate-y-0'
       } ${
         isAtTop
-          ? 'bg-[oklch(0.12_0.05_28/0.85)] backdrop-blur-sm border-b border-gold/20'
+          ? 'bg-[oklch(0.12_0.05_28/0.75)] backdrop-blur-sm border-b border-gold/20'
           : 'bg-[oklch(0.11_0.05_28)] backdrop-blur-md border-b border-gold/35 shadow-[0_4px_24px_oklch(0.08_0.04_28/0.8)]'
       }`}
     >
@@ -91,12 +91,7 @@ export function Header() {
           <div className="hidden md:flex flex-1 items-center justify-center">
             <p className="font-script text-cream text-sm lg:text-base flex items-center gap-2 leading-tight whitespace-nowrap">
               <Flame size={13} className="text-gold fill-gold flex-shrink-0" />
-              <span>
-                Delicious Mexican food for every{' '}
-                <span className="text-gold font-bold not-italic font-body text-xs lg:text-sm tracking-wide uppercase">
-                  special occasion
-                </span>
-              </span>
+              Delicious Mexican Food
               <Flame size={13} className="text-gold fill-gold flex-shrink-0" />
             </p>
           </div>

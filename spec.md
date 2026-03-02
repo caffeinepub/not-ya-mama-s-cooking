@@ -1,12 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Consolidate the two-part header into a single unified bar that doesn't overlap page content, while preserving all existing header elements and scroll behavior.
+**Goal:** Extend the hero image to fill the full viewport from the very top of the page and update the header with a "Delicious Mexican Food" tagline that hides on scroll down and reappears on scroll up.
 
 **Planned changes:**
-- Merge the tagline bar and navigation bar into one single horizontal header strip, keeping the logo/icon, tagline text, and navigation links
-- Ensure the unified header does not overlap or obscure any page content below it
-- Retain the existing hide-on-scroll-down / show-on-scroll-up behavior
-- Add sufficient top margin/padding to the hero section so it has a comfortable visual gap below the header
+- Update the HeroSection so the banner image starts at y=0, bleeding behind the sticky header with no gap or white space at the top of the viewport.
+- Update the Header tagline text to read "Delicious Mexican Food".
+- Make the header hide (slide upward) when the user scrolls down and reappear when scrolling back up, using the existing scroll direction hook.
+- Keep all other header elements (logo, nav links, phone number, hamburger menu) unchanged.
 
-**User-visible outcome:** The site displays a single cohesive header bar with all existing content intact, page content is fully visible below it, and the header still hides when scrolling down and reappears when scrolling up.
+**User-visible outcome:** Visitors see the hero image flush with the very top of the browser window, with the header overlaid on top of it. The header shows "Delicious Mexican Food" as its tagline and smoothly hides when scrolling down, reappearing when scrolling back up.
