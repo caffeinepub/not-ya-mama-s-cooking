@@ -1,24 +1,43 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Mexican food website with a full-bleed hero image extending to the top of the page and a scrollable header displaying 'Delicious Mexican Food'.",
+  "summary": "Restaurant website project (likely Mexican food) where the user wants to restore original Mexican food images from the live website version 9, replacing incorrect Chinese food images currently shown.",
   "architectural_notes": [],
-  "known_issues": [],
-  "isFixRequest": false,
+  "known_issues": [
+    "Wrong images (Chinese food) are showing instead of the original Mexican food images from live website version 9"
+  ],
+  "isFixRequest": true,
+  "imageRequirements": "## Required Images\n- Authentic Mexican street tacos on a rustic wooden board with cilantro, lime wedges, and salsa (taco-menu-item.dim_600x400.png)\n- Loaded Mexican burrito cut in half showing rice, beans, and seasoned meat filling (burrito-menu-item.dim_600x400.png)\n- Golden crispy quesadilla sliced into wedges with sour cream and guacamole dipping sauces (quesadilla-menu-item.dim_600x400.png)\n- Tortilla chips in a basket with fresh chunky salsa roja in a small bowl (chips-salsa-menu-item.dim_600x400.png)\n- Mexican catering spread with trays of tacos, rice, beans, and colorful garnishes at an outdoor event (catering-banner.dim_1200x600.png)",
   "existing_features": [
     {
-      "id": "feature-extend-the-hero-section-image-so-it-fills-the-full-viewport-from-the-very-top-of-the-page-y-0-removing-any-top-offset-or-gap-caused-by-the-sticky-header-the-hero-image-must-visually-bleed-behind-the-header-so-there-is-no-white-space-or-padding-between-the-top-of-the-viewport-and-the-image",
-      "title": "Extend the hero section image so it fills the full viewport from the very top of the page (y=0), removing any top offset or gap caused by the sticky header. The hero image must visually bleed behind the header so there is no white space or padding between the top of the viewport and the image.",
+      "id": "feature-replace-the-image-displayed-in-the-first-menu-item-card-article-1-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-1-div-2-article-1-div-1-div-1-with-the-correct-original-mexican-food-image-from-version-9-the-current-image-shows-chinese-food-and-must-be-replaced-with-the-authentic-mexican-food-image-that-was-present-on-the-live-website-at-version-9",
+      "title": "Replace the image displayed in the first menu item card (article 1, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[1]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image that was present on the live website at version 9.",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     },
     {
-      "id": "feature-update-the-header-component-so-that-the-tagline-text-reads-exactly-delicious-mexican-food-visible-while-the-header-is-shown-and-the-header-hides-disappears-when-the-user-scrolls-down-reappearing-when-the-user-scrolls-back-up-all-other-header-content-logo-nav-links-phone-number-hamburger-menu-must-remain-unchanged",
-      "title": "Update the Header component so that the tagline text reads exactly 'Delicious Mexican Food' (visible while the header is shown) and the header hides/disappears when the user scrolls down, reappearing when the user scrolls back up. All other header content (logo, nav links, phone number, hamburger menu) must remain unchanged.",
+      "id": "feature-replace-the-image-displayed-in-the-third-menu-item-card-article-3-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-1-div-2-article-3-div-1-div-1-with-the-correct-original-mexican-food-image-from-version-9-the-current-image-shows-chinese-food-and-must-be-replaced-with-the-authentic-mexican-food-image-from-the-live-website",
+      "title": "Replace the image displayed in the third menu item card (article 3, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[3]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
       "reqIds": [
         "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-image-displayed-in-the-fourth-menu-item-card-article-4-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-1-div-2-article-4-div-1-div-1-with-the-correct-original-mexican-food-image-from-version-9-the-current-image-shows-chinese-food-and-must-be-replaced-with-the-authentic-mexican-food-image-from-the-live-website",
+      "title": "Replace the image displayed in the fourth menu item card (article 4, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[4]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-image-displayed-in-the-fifth-menu-item-card-article-5-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-1-div-2-article-5-div-1-div-1-with-the-correct-original-mexican-food-image-from-version-9-the-current-image-shows-chinese-food-and-must-be-replaced-with-the-authentic-mexican-food-image-from-the-live-website",
+      "title": "Replace the image displayed in the fifth menu item card (article 5, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[5]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
+      "reqIds": [
+        "REQ-4"
       ],
       "version": 1
     }
@@ -26,19 +45,21 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Hero image extends full bleed to the very top of the page",
+      "summary": "Restore original Mexican food images from live website version 9, replacing the incorrect Chinese food images currently displayed",
       "reqIds": [],
       "status": "pending"
     },
     {
-      "id": "AR-2",
-      "summary": "Header displays 'Delicious Mexican Food' text and disappears when scrolling down",
-      "reqIds": [],
+      "id": "AR-6",
+      "summary": "Replace the image in the catering section (XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[3]/div[2]/div[2]/img[1]) with the correct original Mexican food/catering image from version 9. The current image is incorrect and must be replaced with the authentic catering image that appeared on the live version 9 website.",
+      "reqIds": [
+        "REQ-5"
+      ],
       "status": "pending"
     }
   ],
   "gameProjectType": "none",
-  "projectName": "Delicious Mexican Food Website",
+  "projectName": "Not Ya Mama's Cooking",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

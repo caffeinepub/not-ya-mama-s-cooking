@@ -55,38 +55,38 @@ export default {
           DEFAULT: 'oklch(var(--card))',
           foreground: 'oklch(var(--card-foreground))'
         },
-        // Mexican palette tokens
-        chili: {
-          50:  '#fff1ee',
-          100: '#ffe0d8',
-          200: '#ffc0b0',
-          300: '#ff9478',
-          400: '#ff5f3e',
-          500: '#e83a1a',
-          600: '#c42a10',
-          700: '#9e2010',
-          800: '#7a1c10',
-          900: '#5c1510',
-          DEFAULT: '#c42a10',
-        },
-        sienna: {
-          DEFAULT: '#b5541a',
-          light: '#d4722a',
-          dark: '#8a3a10',
-        },
+        // Mexican palette tokens — OKLCH-based for opacity modifier support
         gold: {
-          DEFAULT: '#d4a017',
-          light: '#f0c040',
-          dark: '#a07810',
-        },
-        verde: {
-          DEFAULT: '#2d6a2d',
-          light: '#4a8c4a',
-          dark: '#1a4a1a',
+          DEFAULT: 'oklch(var(--gold) / <alpha-value>)',
+          light: 'oklch(var(--gold-light) / <alpha-value>)',
+          dark: 'oklch(var(--gold-dark) / <alpha-value>)',
         },
         cream: {
-          DEFAULT: '#fdf6ec',
-          dark: '#f5e8d0',
+          DEFAULT: 'oklch(var(--cream) / <alpha-value>)',
+          dark: 'oklch(var(--cream-dark) / <alpha-value>)',
+        },
+        chili: {
+          50:  'oklch(0.97 0.02 28)',
+          100: 'oklch(0.93 0.04 28)',
+          200: 'oklch(0.86 0.08 28)',
+          300: 'oklch(0.76 0.12 28)',
+          400: 'oklch(0.65 0.16 28)',
+          500: 'oklch(0.55 0.20 28)',
+          600: 'oklch(0.48 0.19 28)',
+          700: 'oklch(0.40 0.17 28)',
+          800: 'oklch(0.32 0.13 28)',
+          900: 'oklch(0.24 0.09 28)',
+          DEFAULT: 'oklch(0.48 0.19 28)',
+        },
+        sienna: {
+          DEFAULT: 'oklch(0.55 0.15 40)',
+          light: 'oklch(0.65 0.16 45)',
+          dark: 'oklch(0.42 0.12 35)',
+        },
+        verde: {
+          DEFAULT: 'oklch(0.45 0.12 145)',
+          light: 'oklch(0.55 0.14 148)',
+          dark: 'oklch(0.32 0.09 142)',
         },
         chart: {
           1: 'oklch(var(--chart-1))',

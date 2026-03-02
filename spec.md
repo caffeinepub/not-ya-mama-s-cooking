@@ -1,12 +1,13 @@
 # Specification
 
 ## Summary
-**Goal:** Extend the hero image to fill the full viewport from the very top of the page and update the header with a "Delicious Mexican Food" tagline that hides on scroll down and reappears on scroll up.
+**Goal:** Restore the correct Mexican food images in five specific elements (four menu item cards and the catering section) that are currently displaying incorrect Chinese food images.
 
 **Planned changes:**
-- Update the HeroSection so the banner image starts at y=0, bleeding behind the sticky header with no gap or white space at the top of the viewport.
-- Update the Header tagline text to read "Delicious Mexican Food".
-- Make the header hide (slide upward) when the user scrolls down and reappear when scrolling back up, using the existing scroll direction hook.
-- Keep all other header elements (logo, nav links, phone number, hamburger menu) unchanged.
+- Replace the image in the first menu item card with an authentic Mexican taco image
+- Replace the image in the third menu item card with an authentic Mexican burrito image
+- Replace the image in the fourth menu item card with an authentic Mexican quesadilla image
+- Replace the image in the fifth menu item card with an authentic chips & salsa image
+- Replace the catering section image with an authentic Mexican catering spread image
 
-**User-visible outcome:** Visitors see the hero image flush with the very top of the browser window, with the header overlaid on top of it. The header shows "Delicious Mexican Food" as its tagline and smoothly hides when scrolling down, reappearing when scrolling back up.
+**User-visible outcome:** All five affected elements display correct Mexican food images instead of Chinese food images, matching the appearance of version 9 of the website.

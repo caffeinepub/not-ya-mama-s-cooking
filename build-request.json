@@ -1,61 +1,119 @@
 {
   "kind": "build_request",
-  "title": "Extend hero image to top of page and add scroll-hiding 'Delicious Mexican Food' header text",
+  "title": "Restore original Mexican food images from version 9 to selected elements",
   "projectName": "Not Ya Mama's Cooking",
-  "priority": "normal",
+  "priority": "high",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Extend the hero section image so it fills the full viewport from the very top of the page (y=0), removing any top offset or gap caused by the sticky header. The hero image must visually bleed behind the header so there is no white space or padding between the top of the viewport and the image.",
+      "text": "Replace the image displayed in the first menu item card (article 1, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[1]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image that was present on the live website at version 9.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "The homepage picture that has the image I need that picture to go all the way to the top of the website"
+          "I need the original Mexican food that are on the live website version nine"
         ]
       },
       "acceptanceCriteria": [
-        "The hero/banner image starts at the very top edge of the browser window with no gap or offset.",
-        "No white or colored space appears between the top of the viewport and the hero image.",
-        "The image extends behind the header on load."
+        "The first menu item card displays a Mexican food image, not a Chinese food image",
+        "The image matches what was shown in the live version 9 of the website",
+        "The image renders correctly and is not broken"
       ]
     },
     {
       "id": "REQ-2",
-      "text": "Update the Header component so that the tagline text reads exactly 'Delicious Mexican Food' (visible while the header is shown) and the header hides/disappears when the user scrolls down, reappearing when the user scrolls back up. All other header content (logo, nav links, phone number, hamburger menu) must remain unchanged.",
+      "text": "Replace the image displayed in the third menu item card (article 3, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[3]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "make sure to put the words (delicious Mexican food) on the header that goes away when I scroll down",
-          "keep everything else the same"
+          "I need the original Mexican food that are on the live website version nine"
         ]
       },
       "acceptanceCriteria": [
-        "The header displays the text 'Delicious Mexican Food' as the tagline while visible.",
-        "The header slides out of view (upward) when the user scrolls down.",
-        "The header reappears when the user scrolls back up.",
-        "All other header elements (logo, navigation, phone number) remain unchanged.",
-        "The scroll-hide behavior uses the existing useScrollDirection hook."
+        "The third menu item card displays a Mexican food image, not a Chinese food image",
+        "The image matches what was shown in the live version 9 of the website",
+        "The image renders correctly and is not broken"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Replace the image displayed in the fourth menu item card (article 4, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[4]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "I need the original Mexican food that are on the live website version nine"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The fourth menu item card displays a Mexican food image, not a Chinese food image",
+        "The image matches what was shown in the live version 9 of the website",
+        "The image renders correctly and is not broken"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Replace the image displayed in the fifth menu item card (article 5, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[5]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "I need the original Mexican food that are on the live website version nine"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The fifth menu item card displays a Mexican food image, not a Chinese food image",
+        "The image matches what was shown in the live version 9 of the website",
+        "The image renders correctly and is not broken"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Replace the image in the catering section (XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[3]/div[2]/div[2]/img[1]) with the correct original Mexican food/catering image from version 9. The current image is incorrect and must be replaced with the authentic catering image that appeared on the live version 9 website.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "I need the original Mexican food that are on the live website version nine"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The catering section image displays the correct Mexican food/catering image from version 9",
+        "The image is not showing Chinese food content",
+        "The image renders correctly and is not broken"
       ]
     }
   ],
   "constraints": [
-    "Do not change any section other than HeroSection and Header.",
-    "Do not modify files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or frontend/src/components/ui.",
-    "Keep all existing header elements (logo, nav links, phone number, hamburger menu) intact."
+    "Only modify the five selected elements identified by the provided XPath expressions",
+    "Do not alter any other images, layout, text, or components not referenced in the selected elements",
+    "Images must come from the existing version 9 assets already in the project (frontend/public/assets/generated) — do not create new placeholder images"
   ],
   "nonGoals": [
-    "Redesigning any section other than the hero image positioning and header tagline.",
-    "Changing the menu, catering, contact, or footer sections.",
-    "Adding new navigation items or changing the header layout beyond the tagline text update."
+    "Changing any text, descriptions, or non-image content",
+    "Modifying menu item cards not listed in the selected elements",
+    "Redesigning any section layout or styling",
+    "Updating backend logic"
   ],
   "imageRequirements": {
-    "required": [],
+    "required": [
+      "Authentic Mexican street tacos on a rustic wooden board with cilantro, lime wedges, and salsa (taco-menu-item.dim_600x400.png)",
+      "Loaded Mexican burrito cut in half showing rice, beans, and seasoned meat filling (burrito-menu-item.dim_600x400.png)",
+      "Golden crispy quesadilla sliced into wedges with sour cream and guacamole dipping sauces (quesadilla-menu-item.dim_600x400.png)",
+      "Tortilla chips in a basket with fresh chunky salsa roja in a small bowl (chips-salsa-menu-item.dim_600x400.png)",
+      "Mexican catering spread with trays of tacos, rice, beans, and colorful garnishes at an outdoor event (catering-banner.dim_1200x600.png)"
+    ],
     "edits": []
   }
 }

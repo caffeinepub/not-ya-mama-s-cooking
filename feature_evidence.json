@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-extend-the-hero-section-image-so-it-fills-the-full-viewport-from-the-very-top-of-the-page-y-0-removing-any-top-offset-or-gap-caused-by-the-sticky-header-the-hero-image-must-visually-bleed-behind-the-header-so-there-is-no-white-space-or-padding-between-the-top-of-the-viewport-and-the-image",
-      "featureTitle": "Extend the hero section image so it fills the full viewport from the very top of the page (y=0), removing any top offset or gap caused by the sticky header. The hero image must visually bleed behind the header so there is no white space or padding between the top of the viewport and the image.",
+      "featureId": "feature-replace-the-image-displayed-in-the-first-menu-item-card-article-1-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-1-div-2-article-1-div-1-div-1-with-the-correct-original-mexican-food-image-from-version-9-the-current-image-shows-chinese-food-and-must-be-replaced-with-the-authentic-mexican-food-image-that-was-present-on-the-live-website-at-version-9",
+      "featureTitle": "Replace the image displayed in the first menu item card (article 1, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[1]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image that was present on the live website at version 9.",
       "files": [
-        "frontend/src/components/HeroSection.tsx"
+        "frontend/src/components/MenuSection.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -21,10 +21,10 @@
       "confidence": "high"
     },
     {
-      "featureId": "feature-update-the-header-component-so-that-the-tagline-text-reads-exactly-delicious-mexican-food-visible-while-the-header-is-shown-and-the-header-hides-disappears-when-the-user-scrolls-down-reappearing-when-the-user-scrolls-back-up-all-other-header-content-logo-nav-links-phone-number-hamburger-menu-must-remain-unchanged",
-      "featureTitle": "Update the Header component so that the tagline text reads exactly 'Delicious Mexican Food' (visible while the header is shown) and the header hides/disappears when the user scrolls down, reappearing when the user scrolls back up. All other header content (logo, nav links, phone number, hamburger menu) must remain unchanged.",
+      "featureId": "feature-replace-the-image-displayed-in-the-third-menu-item-card-article-3-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-1-div-2-article-3-div-1-div-1-with-the-correct-original-mexican-food-image-from-version-9-the-current-image-shows-chinese-food-and-must-be-replaced-with-the-authentic-mexican-food-image-from-the-live-website",
+      "featureTitle": "Replace the image displayed in the third menu item card (article 3, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[3]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
       "files": [
-        "frontend/src/components/Header.tsx"
+        "frontend/src/components/MenuSection.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -36,6 +36,44 @@
       ],
       "testIds": [
         "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-replace-the-image-displayed-in-the-fourth-menu-item-card-article-4-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-1-div-2-article-4-div-1-div-1-with-the-correct-original-mexican-food-image-from-version-9-the-current-image-shows-chinese-food-and-must-be-replaced-with-the-authentic-mexican-food-image-from-the-live-website",
+      "featureTitle": "Replace the image displayed in the fourth menu item card (article 4, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[4]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
+      "files": [
+        "frontend/src/components/MenuSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-replace-the-image-displayed-in-the-fifth-menu-item-card-article-5-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-1-div-2-article-5-div-1-div-1-with-the-correct-original-mexican-food-image-from-version-9-the-current-image-shows-chinese-food-and-must-be-replaced-with-the-authentic-mexican-food-image-from-the-live-website",
+      "featureTitle": "Replace the image displayed in the fifth menu item card (article 5, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[5]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
+      "files": [
+        "frontend/src/components/MenuSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
       ],
       "confidence": "high"
     }

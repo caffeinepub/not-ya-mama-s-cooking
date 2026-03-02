@@ -26,7 +26,8 @@ export function CateringSection() {
   return (
     <section id="catering" className="py-24 bg-[oklch(0.16_0.05_30)] relative overflow-hidden">
       {/* Decorative background */}
-      <div className="absolute inset-0 opacity-5"
+      <div
+        className="absolute inset-0 opacity-5"
         style={{
           backgroundImage: `radial-gradient(circle at 30% 50%, oklch(0.82 0.17 85) 0%, transparent 60%),
             radial-gradient(circle at 70% 50%, oklch(0.72 0.16 55) 0%, transparent 60%)`
@@ -56,7 +57,7 @@ export function CateringSection() {
         {/* Banner image */}
         <div className="rounded-2xl overflow-hidden mb-16 shadow-warm-lg">
           <img
-            src="/assets/generated/catering-banner.dim_1200x500.png"
+            src="/assets/generated/catering-banner.dim_1200x600.png"
             alt="Not Ya Mama's Cooking catering spread"
             className="w-full h-64 sm:h-80 object-cover object-center"
           />

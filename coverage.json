@@ -1,36 +1,67 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-03-02T21:41:55.160Z",
+  "generatedAt": "2026-03-02T23:31:19.913Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 2,
-    "implemented": 2,
+    "total": 5,
+    "implemented": 4,
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Extend the hero section image so it fills the full viewport from the very top of the page (y=0), removing any top offset or gap caused by the sticky header. The hero image must visually bleed behind the header so there is no white space or padding between the top of the viewport and the image.",
+        "summary": "Replace the image displayed in the first menu item card (article 1, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[1]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image that was present on the live website at version 9.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/HeroSection.tsx"
+          "frontend/src/components/MenuSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/HeroSection.tsx"
+          "frontend/src/components/MenuSection.tsx"
         ]
       },
       {
         "id": "REQ-2",
-        "summary": "Update the Header component so that the tagline text reads exactly 'Delicious Mexican Food' (visible while the header is shown) and the header hides/disappears when the user scrolls down, reappearing when the user scrolls back up. All other header content (logo, nav links, phone number, hamburger menu) must remain unchanged.",
+        "summary": "Replace the image displayed in the third menu item card (article 3, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[3]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/Header.tsx"
+          "frontend/src/components/MenuSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/Header.tsx"
+          "frontend/src/components/MenuSection.tsx"
         ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Replace the image displayed in the fourth menu item card (article 4, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[4]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/MenuSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/MenuSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Replace the image displayed in the fifth menu item card (article 5, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[5]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/MenuSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/MenuSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Replace the image in the catering section (XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[3]/div[2]/div[2]/img[1]) with the correct original Mexican food/catering image from version 9. The current image is incorrect and must be replaced with the authentic catering image that appeared on the live version 9 website.",
+        "status": "missing",
+        "plannedFiles": [
+          "frontend/src/components/CateringSection.tsx"
+        ],
+        "matchedFiles": []
       }
     ]
   },
@@ -39,8 +70,12 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/Header.tsx",
-    "frontend/src/components/HeroSection.tsx",
+    "frontend/public/assets/generated/burrito-menu-item.dim_600x400.png",
+    "frontend/public/assets/generated/catering-banner.dim_1200x600.png",
+    "frontend/public/assets/generated/chips-salsa-menu-item.dim_600x400.png",
+    "frontend/public/assets/generated/quesadilla-menu-item.dim_600x400.png",
+    "frontend/public/assets/generated/taco-menu-item.dim_600x400.png",
+    "frontend/src/components/MenuSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

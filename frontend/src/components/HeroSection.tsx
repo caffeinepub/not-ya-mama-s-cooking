@@ -17,7 +17,7 @@ export function HeroSection() {
       {/* Background image with overlay — extends to the very top of the viewport, behind the header */}
       <div className="absolute inset-0">
         <img
-          src="/assets/generated/catering-banner.dim_1200x500.png"
+          src="/assets/generated/hero-bg.dim_1920x1080.png"
           alt="Mexican catering spread"
           className="w-full h-full object-cover object-center"
         />
@@ -87,6 +87,7 @@ export function HeroSection() {
           </button>
           <a
             href="tel:4800914039"
+            onClick={scrollToContact}
             className="flex items-center gap-2 px-8 py-4 border-2 border-gold/60 hover:border-gold text-gold-light hover:text-gold font-body font-bold text-base tracking-wide rounded-full transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
           >
             <Phone size={18} />

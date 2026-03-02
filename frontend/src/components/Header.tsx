@@ -91,7 +91,7 @@ export function Header() {
           <div className="hidden md:flex flex-1 items-center justify-center">
             <p className="font-script text-cream text-sm lg:text-base flex items-center gap-2 leading-tight whitespace-nowrap">
               <Flame size={13} className="text-gold fill-gold flex-shrink-0" />
-              Delicious Mexican Food
+              Delicious Mexican Food For Every Special Event
               <Flame size={13} className="text-gold fill-gold flex-shrink-0" />
             </p>
           </div>
@@ -102,7 +102,7 @@ export function Header() {
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="px-3 py-2 text-cream font-body font-semibold text-xs tracking-wide transition-colors duration-200 rounded-md hover:text-gold-light hover:bg-white/8 border border-transparent hover:border-gold/20"
+                className="px-3 py-2 text-cream font-body font-semibold text-xs tracking-wide transition-colors duration-200 rounded-md hover:text-gold-light hover:bg-white/10 border border-transparent hover:border-gold/20"
               >
                 {item.label}
               </button>
@@ -124,7 +124,7 @@ export function Header() {
               onClick={() => setMenuOpen((prev) => !prev)}
               aria-label={menuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={menuOpen}
-              className="relative flex flex-col items-center justify-center w-10 h-10 rounded-lg border border-gold/50 bg-white/8 hover:bg-white/15 hover:border-gold/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gold/50"
+              className="relative flex flex-col items-center justify-center w-10 h-10 rounded-lg border border-gold/50 bg-white/10 hover:bg-white/20 hover:border-gold/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gold/50"
             >
               {menuOpen ? (
                 <X size={20} className="text-gold-light" />
@@ -148,7 +148,7 @@ export function Header() {
                     <button
                       key={item.href}
                       onClick={() => handleNavClick(item.href)}
-                      className="w-full text-left px-5 py-3 text-cream/90 hover:text-gold-light hover:bg-white/6 font-body font-semibold text-sm tracking-wide transition-all duration-150 flex items-center gap-3 group"
+                      className="w-full text-left px-5 py-3 text-cream/90 hover:text-gold-light hover:bg-white/10 font-body font-semibold text-sm tracking-wide transition-all duration-150 flex items-center gap-3 group"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-gold/50 group-hover:bg-gold transition-colors duration-150 flex-shrink-0" />
                       {item.label}

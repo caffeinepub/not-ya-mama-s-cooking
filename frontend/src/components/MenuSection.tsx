@@ -1,4 +1,3 @@
-import { Badge } from '@/components/ui/badge';
 import { Star } from 'lucide-react';
 
 interface MenuItem {
@@ -18,10 +17,10 @@ const menuItems: MenuItem[] = [
     name: 'Chicken Street Tacos',
     description:
       'Tender, marinated chicken grilled to perfection on a warm corn tortilla. Topped with fresh diced onion, fragrant cilantro, a squeeze of lime, and our house salsa verde.',
-    image: '/assets/generated/chicken-tacos.dim_800x600.png',
+    image: '/assets/generated/tacos.dim_800x600.png',
     badge: 'Signature',
     isSignature: true,
-    details: ['Corn tortillas', 'Grilled chicken', 'Fresh cilantro & onion', 'Salsa verde', 'Lime'],
+    details: ['Corn tortillas', 'Flour Tortillas', 'Grilled chicken', 'Fresh cilantro & onion', 'Salsa verde', 'Lime'],
   },
   {
     id: 'beef-tacos',
@@ -31,22 +30,14 @@ const menuItems: MenuItem[] = [
     image: '/assets/generated/beef-tacos.dim_800x600.png',
     badge: 'Signature',
     isSignature: true,
-    details: ['Corn tortillas', 'Carne asada', 'Fresh cilantro & onion', 'Smoky red salsa', 'Lime'],
-  },
-  {
-    id: 'burritos',
-    name: 'Stuffed Burritos',
-    description:
-      'A hearty flour tortilla packed with seasoned rice, refried beans, your choice of chicken or beef, melted cheese, sour cream, and fresh guacamole. A full meal in every bite.',
-    image: '/assets/generated/burrito.dim_800x600.png',
-    details: ['Flour tortilla', 'Seasoned rice & beans', 'Choice of protein', 'Melted cheese', 'Guacamole & sour cream'],
+    details: ['Corn tortillas', 'Flour Tortillas', 'Carne asada', 'Fresh cilantro & onion', 'Smoky red salsa', 'Lime'],
   },
   {
     id: 'quesadillas',
     name: 'Quesadillas',
     description:
       'Lightly toasted flour tortillas filled with gooey melted cheese. Served with fresh cilantro, sliced onions, house salsa, and cool sour cream on the side.',
-    image: '/assets/generated/quesadilla-cheese-sides.dim_800x600.png',
+    image: '/assets/generated/quesadillas.dim_800x600.png',
     details: ['Flour tortilla', 'Melted cheese blend', 'Cilantro & sliced onions', 'House salsa', 'Sour cream'],
     choices: [
       { label: 'Cheese', emoji: '🧀' },
@@ -59,8 +50,16 @@ const menuItems: MenuItem[] = [
     name: 'Chips & Salsa',
     description:
       'Crispy, house-made tortilla chips served alongside our vibrant, freshly prepared salsa — bursting with ripe tomatoes, jalapeño, cilantro, and a hint of lime. The perfect starter.',
-    image: '/assets/generated/chips-salsa-menu.dim_600x400.png',
+    image: '/assets/generated/chips-salsa.dim_800x600.png',
     details: ['House tortilla chips', 'Fresh tomato salsa', 'Jalapeño', 'Cilantro', 'Lime'],
+  },
+  {
+    id: 'burritos',
+    name: 'Stuffed Burritos',
+    description:
+      'A hearty flour tortilla packed with seasoned rice, refried beans, your choice of chicken or beef, melted cheese, sour cream, and fresh guacamole. A full meal in every bite.',
+    image: '/assets/generated/burritos.dim_800x600.png',
+    details: ['Flour tortilla', 'Seasoned rice & beans', 'Choice of protein', 'Melted cheese', 'Guacamole & sour cream'],
   },
 ];
 
@@ -97,11 +96,11 @@ function MenuCard({ item }: { item: MenuItem }) {
 
         {/* Choice selector label for quesadillas */}
         {item.choices && (
-          <div className="flex items-center gap-2 mb-3">
+          <div className="flex items-center gap-2 mb-3 flex-wrap">
             <span className="font-body text-xs font-bold text-[oklch(0.72_0.16_55)] uppercase tracking-wider">
               Choose your filling:
             </span>
-            <div className="flex gap-1.5">
+            <div className="flex gap-1.5 flex-wrap">
               {item.choices.map((choice) => (
                 <span
                   key={choice.label}
@@ -145,70 +144,30 @@ export function MenuSection() {
             Our <span className="text-[oklch(0.48_0.19_28)]">Menu</span>
           </h2>
           <div className="section-divider w-32 mx-auto mb-6" />
-          <p className="font-body text-muted-foreground text-lg max-w-2xl mx-auto">
-            Every dish is crafted with love, using time-honored recipes and the freshest ingredients.
-            Taste the difference that real Mexican cooking makes.
+          <p className="font-body text-muted-foreground text-base max-w-2xl mx-auto">
+            Every dish is crafted with fresh ingredients and authentic Mexican recipes passed down
+            through generations. Perfect for catering your next event.
           </p>
         </div>
 
-        {/* Street Tacos Feature Banner */}
-        <div id="tacos" className="mb-12 rounded-2xl overflow-hidden bg-[oklch(0.18_0.06_30)] relative">
-          <div className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage: `repeating-linear-gradient(
-                -45deg,
-                oklch(0.82 0.17 85) 0px,
-                oklch(0.82 0.17 85) 1px,
-                transparent 1px,
-                transparent 15px
-              )`
-            }}
-          />
-          <div className="relative z-10 px-8 py-8 flex flex-col sm:flex-row items-center gap-4">
-            <div className="flex-1">
-              <div className="flex items-center gap-2 mb-2">
-                <Star size={16} className="text-gold fill-gold" />
-                <span className="font-body text-gold font-bold text-sm tracking-widest uppercase">
-                  Our Specialty
-                </span>
-              </div>
-              <h3 className="font-display text-3xl sm:text-4xl font-black text-cream mb-2">
-                Authentic Street Tacos
-              </h3>
-              <p className="font-body text-cream/70 text-base">
-                Our street tacos are the heart of Not Ya Mama's Cooking — made with traditional recipes
-                passed down through generations. Available in chicken and beef.
-              </p>
-            </div>
-            <div className="flex gap-3">
-              <Badge className="bg-[oklch(0.72_0.16_55)] text-cream border-0 font-body font-semibold px-4 py-2 text-sm">
-                🐔 Chicken
-              </Badge>
-              <Badge className="bg-[oklch(0.48_0.19_28)] text-cream border-0 font-body font-semibold px-4 py-2 text-sm">
-                🥩 Beef
-              </Badge>
-            </div>
-          </div>
-        </div>
-
-        {/* Menu Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="burritos">
+        {/* Menu grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {menuItems.map((item) => (
             <MenuCard key={item.id} item={item} />
           ))}
         </div>
 
-        {/* Bottom note */}
-        <div className="mt-12 text-center">
-          <p className="font-body text-muted-foreground text-sm">
-            All items available for catering orders.{' '}
-            <button
-              onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-[oklch(0.72_0.16_55)] hover:text-[oklch(0.65_0.18_50)] font-semibold underline underline-offset-2 transition-colors"
-            >
-              Contact us for custom menus.
-            </button>
+        {/* Bottom CTA */}
+        <div className="text-center mt-16">
+          <p className="font-body text-muted-foreground text-base mb-6">
+            Want to bring these flavors to your event?
           </p>
+          <button
+            onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="inline-flex items-center gap-2 px-10 py-4 bg-[oklch(0.48_0.19_28)] hover:bg-[oklch(0.42_0.18_28)] text-cream font-body font-bold text-base tracking-wide rounded-full shadow-warm hover:shadow-warm-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
+          >
+            Book Catering Now
+          </button>
         </div>
       </div>
     </section>

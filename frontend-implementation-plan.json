@@ -1,39 +1,85 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Extend hero image to top of page and add scroll-hiding 'Delicious Mexican Food' header text",
+  "title": "Restore original Mexican food images from version 9 to selected elements",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Extend the hero section image to fill the full viewport from y=0, removing any top offset or gap caused by the sticky header",
+      "summary": "Replace the first menu item card image with the authentic Mexican taco image from version 9",
       "acceptanceCriteria": [
-        "The hero/banner image starts at the very top edge of the browser window with no gap or offset.",
-        "No white or colored space appears between the top of the viewport and the hero image.",
-        "The image extends behind the header on load."
+        "The first menu item card displays a Mexican food image, not a Chinese food image",
+        "The image matches what was shown in the live version 9 of the website",
+        "The image renders correctly and is not broken"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/HeroSection.tsx",
+          "path": "frontend/src/components/MenuSection.tsx",
           "operation": "modify",
-          "description": "Remove top padding/margin from the hero container and adjust positioning to ensure the background image starts at y=0. Update the container styling to use absolute positioning or negative margin to extend behind the header. Ensure the hero section height accounts for content visibility while the image bleeds to the viewport top."
+          "description": "Update the first menu item card (article 1) to use the correct Mexican taco image asset frontend/public/assets/generated/tacos.dim_800x600.png from version 9, replacing any incorrect Chinese food imagery"
         }
       ]
     },
     {
       "id": "REQ-2",
-      "summary": "Update the Header component to display 'Delicious Mexican Food' as the tagline and implement scroll-hide behavior",
+      "summary": "Replace the third menu item card image with the authentic Mexican quesadilla image from version 9",
       "acceptanceCriteria": [
-        "The header displays the text 'Delicious Mexican Food' as the tagline while visible.",
-        "The header slides out of view (upward) when the user scrolls down.",
-        "The header reappears when the user scrolls back up.",
-        "All other header elements (logo, navigation, phone number) remain unchanged.",
-        "The scroll-hide behavior uses the existing useScrollDirection hook."
+        "The third menu item card displays a Mexican food image, not a Chinese food image",
+        "The image matches what was shown in the live version 9 of the website",
+        "The image renders correctly and is not broken"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Header.tsx",
+          "path": "frontend/src/components/MenuSection.tsx",
           "operation": "modify",
-          "description": "Change the tagline text from 'Delicious Mexican food for every special occasion!' to 'Delicious Mexican Food'. Import and use the useScrollDirection hook to track scroll direction. Add conditional CSS transform (translateY) to hide the header when scrolling down and show it when scrolling up. Apply smooth transition for the hide/show animation. Keep all existing header elements (logo, nav links, phone number, hamburger menu) unchanged."
+          "description": "Update the third menu item card (article 3) to use the correct Mexican quesadilla image asset frontend/public/assets/generated/quesadillas.dim_800x600.png from version 9, replacing any incorrect Chinese food imagery"
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Replace the fourth menu item card image with the authentic Mexican chips and salsa image from version 9",
+      "acceptanceCriteria": [
+        "The fourth menu item card displays a Mexican food image, not a Chinese food image",
+        "The image matches what was shown in the live version 9 of the website",
+        "The image renders correctly and is not broken"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/MenuSection.tsx",
+          "operation": "modify",
+          "description": "Update the fourth menu item card (article 4) to use the correct Mexican chips and salsa image asset frontend/public/assets/generated/chips-salsa.dim_800x600.png from version 9, replacing any incorrect Chinese food imagery"
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Replace the fifth menu item card image with the authentic Mexican burrito image from version 9",
+      "acceptanceCriteria": [
+        "The fifth menu item card displays a Mexican food image, not a Chinese food image",
+        "The image matches what was shown in the live version 9 of the website",
+        "The image renders correctly and is not broken"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/MenuSection.tsx",
+          "operation": "modify",
+          "description": "Update the fifth menu item card (article 5) to use the correct Mexican burrito image asset frontend/public/assets/generated/burritos.dim_800x600.png from version 9, replacing any incorrect Chinese food imagery"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Replace the catering section banner image with the authentic Mexican catering image from version 9",
+      "acceptanceCriteria": [
+        "The catering section image displays the correct Mexican food/catering image from version 9",
+        "The image is not showing Chinese food content",
+        "The image renders correctly and is not broken"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CateringSection.tsx",
+          "operation": "modify",
+          "description": "Update the catering section banner image to use the correct Mexican catering image asset frontend/public/assets/generated/catering-banner.dim_1200x600.png from version 9, replacing any incorrect imagery. This file already references this asset according to the file summary, so verify the current src attribute matches this path exactly"
         }
       ]
     }

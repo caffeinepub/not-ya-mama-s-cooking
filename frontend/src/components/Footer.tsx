@@ -2,6 +2,7 @@ import { Phone, MapPin, Heart } from 'lucide-react';
 
 export function Footer() {
   const year = new Date().getFullYear();
+  const appId = typeof window !== 'undefined' ? window.location.hostname : 'not-ya-mamas-cooking';
 
   return (
     <footer className="bg-[oklch(0.10_0.03_28)] border-t border-gold/15">
@@ -86,9 +87,22 @@ export function Footer() {
           <p className="font-body text-cream/30 text-xs">
             © {year} Not Ya Mama's Cooking. All rights reserved.
           </p>
-          <p className="font-body text-cream/30 text-xs flex items-center gap-1">
-            Made with <Heart size={11} className="text-[oklch(0.72_0.16_55)] fill-current" /> in Phoenix, AZ
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            <p className="font-body text-cream/30 text-xs flex items-center gap-1">
+              Made with <Heart size={11} className="text-[oklch(0.72_0.16_55)] fill-current" /> in Phoenix, AZ
+            </p>
+            <p className="font-body text-cream/25 text-xs flex items-center gap-1">
+              Built with <Heart size={10} className="text-gold/50 fill-current" />
+              <a
+                href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(appId)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-cream/40 transition-colors duration-200"
+              >
+                caffeine.ai
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
