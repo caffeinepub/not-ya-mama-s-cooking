@@ -1,41 +1,72 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Fix header overlapping hero image and update header tagline text",
+  "title": "Consolidate header into single unified bar with proper spacing",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Update the header tagline bar text to display 'Delicious Mexican food for every special occasion'",
+      "summary": "Merge the two separate header sections (tagline bar and navigation bar) into a single unified, cohesive header bar preserving all existing content",
       "acceptanceCriteria": [
-        "The tagline bar in the header displays exactly 'Delicious Mexican food for every special occasion'",
-        "No other header content or layout is changed"
+        "The header renders as a single horizontal bar with no visible second bar or sub-bar",
+        "The logo/icon, tagline text, and navigation links are all present in the unified header",
+        "The header does not visually appear as two separate sections"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/Header.tsx",
           "operation": "modify",
-          "description": "Update the tagline text in the header tagline bar (the div with className containing 'bg-chili-600 text-cream-50') from the current text to 'Delicious Mexican food for every special occasion'. Locate the <p> element inside the tagline bar and replace its text content."
+          "description": "Restructure the Header component to render as a single unified bar instead of two stacked sections. Combine the tagline bar (with logo and tagline text) and navigation bar into one horizontal container. Preserve the logo, tagline span text, desktop navigation links, and mobile hamburger menu. Keep the existing useScrollDirection hook integration and className-based hide/show behavior. Ensure all elements are arranged horizontally with proper spacing using flexbox or grid layout."
         }
       ]
     },
     {
       "id": "REQ-2",
-      "summary": "Fix the fixed header so it no longer overlaps the hero section image, ensuring the girl image is fully visible",
+      "summary": "Ensure the unified header does not overlap or block any page content below it",
       "acceptanceCriteria": [
-        "The girl/hero image is fully visible and not covered by the header at any point on page load",
-        "The header remains functional (navigation, mobile menu) and visually consistent",
-        "The hero section content starts below the header, with no clipping of the hero image at the top"
+        "No page content is visually hidden or overlapped by the header",
+        "The hero section begins below the full height of the header with visible separation"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Review and adjust the header's positioning strategy to prevent content overlap. If the header uses fixed or sticky positioning, ensure the body or main container has adequate top padding or margin to account for the header's height. Add appropriate spacing utilities or inline styles to push content below the header bar."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add top padding or margin to the main content container (or directly to the HeroSection wrapper) to provide clearance below the header. Ensure the spacing accounts for the unified header's full height so no content is hidden behind it when the page loads."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Retain the existing hide-on-scroll-down behavior for the unified header",
+      "acceptanceCriteria": [
+        "The header hides (slides up or fades out) when the user scrolls down",
+        "The header reappears when the user scrolls up",
+        "Behavior matches the existing scroll-direction logic"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Verify that the unified header layout preserves the existing useScrollDirection hook integration. Ensure the conditional className logic that applies hide/show transitions based on scroll direction remains intact after restructuring the header. Test that the scroll behavior (hiding on scroll-down, reappearing on scroll-up) works seamlessly with the new single-bar layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add sufficient top margin or padding-top to the hero section so the hero image is not too close to the header",
+      "acceptanceCriteria": [
+        "The hero image has a noticeable gap below the header and does not feel cramped against it",
+        "The spacing looks intentional and consistent with the site's visual style"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Add top padding or margin to the hero section container to account for the fixed header height (approximately 128px total: 40px tagline bar + 88px main header). Ensure the hero background image and all content start below the header by adding appropriate spacing to the outermost container div. The background image positioning should be adjusted so the top of the image is visible below the header."
-        },
-        {
-          "path": "frontend/src/components/Header.tsx",
-          "operation": "modify",
-          "description": "Review the header's fixed positioning and z-index to ensure it sits above other content but does not visually obstruct the hero image. Verify that the header height calculations are correct and that the mobile menu behavior remains functional. No structural changes to navigation or layout are needed, only validation of positioning behavior."
+          "description": "Add top padding or margin to the HeroSection component to create a comfortable visual gap between the bottom of the unified header and the top of the hero image. Use Tailwind spacing utilities (e.g., pt-24, pt-32, or custom values) to ensure the hero content does not feel cramped against the header. The spacing should feel intentional and match the site's overall design aesthetic."
         }
       ]
     }

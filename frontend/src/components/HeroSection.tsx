@@ -12,10 +12,10 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[116px]"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
-      {/* Background image with overlay */}
-      <div className="absolute inset-0 top-[116px]">
+      {/* Background image with overlay — starts below the header with extra breathing room */}
+      <div className="absolute inset-0 top-20 mt-8">
         <img
           src="/assets/generated/catering-banner.dim_1200x500.png"
           alt="Mexican catering spread"
@@ -38,7 +38,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto pt-8">
         {/* Logo */}
         <div className="flex justify-center mb-8">
           <div className="relative">

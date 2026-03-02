@@ -1,44 +1,52 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Mexican food themed app/website featuring a girl image and header text about delicious Mexican food for special occasions.",
-  "architectural_notes": [],
+  "summary": "Mexican food catering website with a hero image, icon, and auto-hiding header on scroll. User is iterating on header layout to consolidate it into a single cohesive bar that doesn't overlap content, hides on scroll, and has proper spacing from the hero image.",
+  "architectural_notes": [
+    "Header should hide on scroll (scroll-away behavior already implemented)",
+    "Header must be a single consolidated bar (no double/split header sections)",
+    "Hero image should have adequate top spacing so it is not too close to the header"
+  ],
   "known_issues": [
-    "Header is overlapping/covering the girl image"
+    "Header appears as two separate sections instead of one unified header bar",
+    "Hero image is positioned too close to the header, causing overlap or tight spacing"
   ],
   "isFixRequest": true,
   "existing_features": [
     {
-      "id": "feature-update-the-header-tagline-bar-located-at-xpath-html-1-body-1-div-1-div-1-header-1-div-2-div-1-to-display-the-text-delicious-mexican-food-for-every-special-occasion-instead-of-the-current-tagline-text",
-      "title": "Update the header tagline bar (located at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[2]/div[1]) to display the text 'Delicious Mexican food for every special occasion' instead of the current tagline text.",
+      "id": "feature-merge-the-two-separate-header-sections-tagline-bar-and-navigation-bar-into-a-single-unified-cohesive-header-bar-all-existing-content-must-be-preserved-the-icon-logo-the-tagline-text-the-span-at-xpath-html-1-body-1-div-1-div-1-header-1-div-1-p-1-span-1-navigation-links-and-any-other-current-header-elements-the-result-must-appear-as-one-header-strip-not-two-stacked-rows",
+      "title": "Merge the two separate header sections (tagline bar and navigation bar) into a single unified, cohesive header bar. All existing content must be preserved: the icon/logo, the tagline text (the span at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/p[1]/span[1]), navigation links, and any other current header elements. The result must appear as one header strip, not two stacked rows.",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     },
     {
-      "id": "feature-fix-the-fixed-sticky-header-in-frontend-src-components-header-tsx-so-it-no-longer-overlaps-the-hero-section-image-the-hero-section-and-the-girl-image-must-be-fully-visible-and-not-obscured-by-the-header-adjust-the-hero-section-top-padding-or-offset-to-account-for-the-header-height-so-the-image-is-completely-visible-from-its-top-edge",
-      "title": "Fix the fixed/sticky header in frontend/src/components/Header.tsx so it no longer overlaps the hero section image. The hero section and the girl image must be fully visible and not obscured by the header. Adjust the hero section top padding or offset to account for the header height so the image is completely visible from its top edge.",
+      "id": "feature-ensure-the-unified-header-does-not-overlap-or-block-any-page-content-below-it-the-hero-section-and-all-other-content-must-start-below-the-header-with-adequate-clearance-so-nothing-is-hidden-behind-the-header-bar",
+      "title": "Ensure the unified header does not overlap or block any page content below it. The hero section (and all other content) must start below the header with adequate clearance so nothing is hidden behind the header bar.",
       "reqIds": [
         "REQ-2"
       ],
       "version": 1
-    }
-  ],
-  "new_feature_requests": [
-    {
-      "id": "AR-1",
-      "summary": "Fix header overlapping the girl image so the image is fully visible",
-      "reqIds": [],
-      "status": "pending"
     },
     {
-      "id": "AR-2",
-      "summary": "Update header text to say 'Delicious Mexican food for every special occasion'",
-      "reqIds": [],
-      "status": "pending"
+      "id": "feature-retain-the-existing-hide-on-scroll-down-behavior-for-the-unified-header-the-header-should-slide-out-of-view-when-the-user-scrolls-down-and-reappear-when-scrolling-back-up-exactly-as-currently-implemented-via-the-usescrolldirection-hook",
+      "title": "Retain the existing hide-on-scroll-down behavior for the unified header. The header should slide out of view when the user scrolls down and reappear when scrolling back up, exactly as currently implemented via the useScrollDirection hook.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-sufficient-top-margin-or-padding-top-to-the-hero-section-so-that-the-hero-image-is-not-too-close-to-the-header-there-should-be-a-comfortable-visual-gap-between-the-bottom-of-the-unified-header-and-the-top-of-the-hero-image",
+      "title": "Add sufficient top margin or padding-top to the hero section so that the hero image is not too close to the header. There should be a comfortable visual gap between the bottom of the unified header and the top of the hero image.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
     }
   ],
+  "new_feature_requests": [],
   "gameProjectType": "none",
   "projectName": "Not Ya Mama's Cooking",
   "clarification_mode": "instant",

@@ -1,10 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Fix the sticky header overlapping the hero image and update the header tagline text.
+**Goal:** Consolidate the two-part header into a single unified bar that doesn't overlap page content, while preserving all existing header elements and scroll behavior.
 
 **Planned changes:**
-- Update the header tagline bar text to "Delicious Mexican food for every special occasion"
-- Fix the hero section so it is not covered by the fixed/sticky header, by adding appropriate top padding or offset to account for the header height
+- Merge the tagline bar and navigation bar into one single horizontal header strip, keeping the logo/icon, tagline text, and navigation links
+- Ensure the unified header does not overlap or obscure any page content below it
+- Retain the existing hide-on-scroll-down / show-on-scroll-up behavior
+- Add sufficient top margin/padding to the hero section so it has a comfortable visual gap below the header
 
-**User-visible outcome:** The hero image is fully visible without being obscured by the header, and the header displays the updated tagline text.
+**User-visible outcome:** The site displays a single cohesive header bar with all existing content intact, page content is fully visible below it, and the header still hides when scrolling down and reappears when scrolling up.

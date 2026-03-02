@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-update-the-header-tagline-bar-located-at-xpath-html-1-body-1-div-1-div-1-header-1-div-2-div-1-to-display-the-text-delicious-mexican-food-for-every-special-occasion-instead-of-the-current-tagline-text",
-      "featureTitle": "Update the header tagline bar (located at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[2]/div[1]) to display the text 'Delicious Mexican food for every special occasion' instead of the current tagline text.",
+      "featureId": "feature-merge-the-two-separate-header-sections-tagline-bar-and-navigation-bar-into-a-single-unified-cohesive-header-bar-all-existing-content-must-be-preserved-the-icon-logo-the-tagline-text-the-span-at-xpath-html-1-body-1-div-1-div-1-header-1-div-1-p-1-span-1-navigation-links-and-any-other-current-header-elements-the-result-must-appear-as-one-header-strip-not-two-stacked-rows",
+      "featureTitle": "Merge the two separate header sections (tagline bar and navigation bar) into a single unified, cohesive header bar. All existing content must be preserved: the icon/logo, the tagline text (the span at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/p[1]/span[1]), navigation links, and any other current header elements. The result must appear as one header strip, not two stacked rows.",
       "files": [
         "frontend/src/components/Header.tsx"
       ],
@@ -21,11 +21,10 @@
       "confidence": "high"
     },
     {
-      "featureId": "feature-fix-the-fixed-sticky-header-in-frontend-src-components-header-tsx-so-it-no-longer-overlaps-the-hero-section-image-the-hero-section-and-the-girl-image-must-be-fully-visible-and-not-obscured-by-the-header-adjust-the-hero-section-top-padding-or-offset-to-account-for-the-header-height-so-the-image-is-completely-visible-from-its-top-edge",
-      "featureTitle": "Fix the fixed/sticky header in frontend/src/components/Header.tsx so it no longer overlaps the hero section image. The hero section and the girl image must be fully visible and not obscured by the header. Adjust the hero section top padding or offset to account for the header height so the image is completely visible from its top edge.",
+      "featureId": "feature-ensure-the-unified-header-does-not-overlap-or-block-any-page-content-below-it-the-hero-section-and-all-other-content-must-start-below-the-header-with-adequate-clearance-so-nothing-is-hidden-behind-the-header-bar",
+      "featureTitle": "Ensure the unified header does not overlap or block any page content below it. The hero section (and all other content) must start below the header with adequate clearance so nothing is hidden behind the header bar.",
       "files": [
-        "frontend/src/components/Header.tsx",
-        "frontend/src/components/HeroSection.tsx"
+        "frontend/src/components/Header.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -37,6 +36,44 @@
       ],
       "testIds": [
         "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-retain-the-existing-hide-on-scroll-down-behavior-for-the-unified-header-the-header-should-slide-out-of-view-when-the-user-scrolls-down-and-reappear-when-scrolling-back-up-exactly-as-currently-implemented-via-the-usescrolldirection-hook",
+      "featureTitle": "Retain the existing hide-on-scroll-down behavior for the unified header. The header should slide out of view when the user scrolls down and reappear when scrolling back up, exactly as currently implemented via the useScrollDirection hook.",
+      "files": [
+        "frontend/src/components/Header.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-sufficient-top-margin-or-padding-top-to-the-hero-section-so-that-the-hero-image-is-not-too-close-to-the-header-there-should-be-a-comfortable-visual-gap-between-the-bottom-of-the-unified-header-and-the-top-of-the-hero-image",
+      "featureTitle": "Add sufficient top margin or padding-top to the hero section so that the hero image is not too close to the header. There should be a comfortable visual gap between the bottom of the unified header and the top of the hero image.",
+      "files": [
+        "frontend/src/components/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
       ],
       "confidence": "high"
     }
