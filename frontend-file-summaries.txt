@@ -8,6 +8,6 @@
   "frontend/src/components/MenuSection.tsx": "Menu showcase with five item cards; Chicken Street Tacos now correctly uses `chicken-tacos.dim_800x600.png`, Quesadillas uses `quesadilla.dim_800x600.png`, and Chips & Salsa uses `chips-salsa.dim_800x600.png`, with all other cards and layout unchanged.",
   "frontend/src/components/CateringSection.tsx": "Catering services section with offerings grid, included items checklist, and scroll-to-contact CTA; banner image height increased from `h-64 sm:h-80` to `h-96 sm:h-[32rem]` to make the woman image larger.",
   "frontend/src/components/ContactSection.tsx": "Contact section with Jasmine Cota's info card, clickable phone link, service area, and call CTA button; no changes from previous version.",
-  "frontend/src/components/Footer.tsx": "Business footer with logo, quick links, contact info, copyright, \"Made with love in Phoenix AZ\" tagline, and caffeine.ai attribution with UTM tracking.",
+  "frontend/src/components/Footer.tsx": "Business footer with logo, quick links, contact info, copyright, and \"Made with love in Phoenix AZ\" tagline; the caffeine.ai attribution has been removed.",
   "frontend/src/App.tsx": "Root application component composing all page sections into a single-page layout; unchanged structure."
 }

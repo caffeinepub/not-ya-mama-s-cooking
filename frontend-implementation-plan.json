@@ -1,65 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Fix chicken taco image and restore salsa/chips and quesadilla images",
+  "title": "Remove 'Built by Caffeine AI' attribution from footer",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Replace the current chicken taco images in the MenuSection with correct images that clearly show chicken tacos with visible grilled/seasoned chicken as the filling",
+      "summary": "Remove the 'Built by Caffeine AI' attribution text and any associated link or UTM tracking from the Footer component while preserving all other footer content",
       "acceptanceCriteria": [
-        "The chicken taco menu card displays an image that clearly shows chicken tacos with chicken as the primary visible filling",
-        "The image is distinct from beef/street taco imagery used elsewhere on the site"
+        "The footer no longer displays any text, link, or element referencing 'Caffeine AI' or 'Built by Caffeine AI'.",
+        "All other footer content (logo, nav links, contact info, copyright) is preserved exactly as in Version 20.",
+        "No broken layout or empty gap is left where the attribution previously appeared."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/MenuSection.tsx",
+          "path": "frontend/src/components/Footer.tsx",
           "operation": "modify",
-          "description": "Update the chicken taco menu card image reference to use the generated chicken-tacos.dim_800x600.png asset from frontend/public/assets/generated/chicken-tacos.dim_800x600.png. Replace any existing taco image reference for the chicken taco card with this authentic chicken taco image showing grilled seasoned chicken filling."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Restore the salsa and chips menu item image in the MenuSection that was present in a previous version",
-      "acceptanceCriteria": [
-        "The chips & salsa menu card displays an appealing image of salsa and tortilla chips",
-        "The image is visible and properly sized within the menu card grid"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/MenuSection.tsx",
-          "operation": "modify",
-          "description": "Update the chips & salsa menu card image reference to use the generated chips-salsa.dim_800x600.png asset from frontend/public/assets/generated/chips-salsa.dim_800x600.png. Ensure the image is properly displayed within the menu card structure."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Restore the quesadilla menu item image in the MenuSection that was present in a previous version",
-      "acceptanceCriteria": [
-        "The quesadilla menu card displays an appealing image of a quesadilla",
-        "The image is visible and properly sized within the menu card grid"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/MenuSection.tsx",
-          "operation": "modify",
-          "description": "Update the quesadilla menu card image reference to use the generated quesadilla.dim_800x600.png asset from frontend/public/assets/generated/quesadilla.dim_800x600.png. Ensure the image is properly displayed within the menu card structure showing the golden crispy quesadilla with visible cheese and chicken filling."
-        }
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "summary": "Retain the new catering section banner image at the bottom of the website and do not revert or replace this image",
-      "acceptanceCriteria": [
-        "The CateringSection at the bottom of the page continues to display the new catering banner image introduced in Version 19",
-        "The increased height classes (h-96 sm:h-[32rem]) on the banner image container remain unchanged"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/CateringSection.tsx",
-          "operation": "modify",
-          "description": "Verify that the CateringSection banner image container retains the increased height classes (h-96 sm:h-[32rem]) and continues to display the current catering banner image. Do not modify the image source or height classes. This is a verification-only operation to ensure no accidental reversion occurs during the menu image updates."
+          "description": "Remove the caffeine.ai attribution element including its text, anchor tag, and any UTM tracking parameters. Preserve the brand logo, quick navigation links (Menu, Catering, Contact), contact details (phone and email), and copyright notice. Ensure no empty gaps or layout issues remain after removing the attribution."
         }
       ]
     }

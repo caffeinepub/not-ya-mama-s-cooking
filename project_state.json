@@ -1,48 +1,25 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Restaurant website project with food photography. User wants chicken taco images corrected to show actual chicken tacos, salsa/chips and quesadilla images restored from live version, and new catering picture retained at the bottom of the website.",
+  "summary": "Catering website project (Version 20) with chicken taco images, salsa chips, quesadilla, and catering section. User wants to remove 'Built by Caffeine AI' footer text.",
   "architectural_notes": [],
-  "known_issues": [
-    "Chicken taco images are not showing actual chicken — need correct chicken taco photos",
-    "Salsa/chips image missing — needs to be restored from live version",
-    "Quesadilla image missing — needs to be restored from live version"
-  ],
-  "isFixRequest": true,
-  "imageRequirements": "## Required Images\n- Authentic Mexican chicken tacos with visible grilled seasoned chicken, fresh cilantro, diced onion, lime wedge, on corn tortillas, warm natural lighting (chicken-tacos.dim_800x600.png)\n- Mexican-style chips and salsa — crispy tortilla chips in a basket alongside a bowl of vibrant red salsa, garnished with cilantro, rustic wood or tile surface (chips-salsa.dim_800x600.png)\n- Golden crispy quesadilla cut into wedges showing melted cheese and chicken filling, served on a wooden board with sour cream and salsa dipping sides, warm lighting (quesadilla.dim_800x600.png)",
+  "known_issues": [],
+  "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-replace-the-current-chicken-taco-images-in-the-menusection-with-correct-images-that-clearly-show-chicken-tacos-with-visible-grilled-seasoned-chicken-as-the-filling-the-images-must-look-authentic-and-appetizing",
-      "title": "Replace the current chicken taco images in the MenuSection with correct images that clearly show chicken tacos (with visible grilled/seasoned chicken as the filling). The images must look authentic and appetizing.",
+      "id": "feature-remove-the-built-by-caffeine-ai-attribution-text-and-any-associated-link-or-utm-tracking-from-the-footer-component-all-other-footer-content-brand-logo-quick-navigation-links-contact-details-copyright-notice-must-remain-unchanged",
+      "title": "Remove the 'Built by Caffeine AI' attribution text and any associated link or UTM tracking from the Footer component. All other footer content (brand logo, quick navigation links, contact details, copyright notice) must remain unchanged.",
       "reqIds": [
         "REQ-1"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-restore-the-salsa-and-chips-menu-item-image-in-the-menusection-this-image-was-present-in-a-previous-version-live-version-and-must-be-brought-back-to-the-chips-salsa-menu-card",
-      "title": "Restore the salsa and chips menu item image in the MenuSection. This image was present in a previous version (live version) and must be brought back to the chips & salsa menu card.",
-      "reqIds": [
-        "REQ-2"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-restore-the-quesadilla-menu-item-image-in-the-menusection-this-image-was-present-in-a-previous-version-live-version-and-must-be-brought-back-to-the-quesadilla-menu-card",
-      "title": "Restore the quesadilla menu item image in the MenuSection. This image was present in a previous version (live version) and must be brought back to the quesadilla menu card.",
-      "reqIds": [
-        "REQ-3"
       ],
       "version": 1
     }
   ],
   "new_feature_requests": [
     {
-      "id": "AR-4",
-      "summary": "Retain the new catering section banner image (the enlarged catering picture with the woman) at the bottom of the website in CateringSection. Do not revert or replace this image.",
-      "reqIds": [
-        "REQ-4"
-      ],
+      "id": "AR-1",
+      "summary": "Remove 'Built by Caffeine AI' text from the bottom/footer of the website",
+      "reqIds": [],
       "status": "pending"
     }
   ],

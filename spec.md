@@ -1,12 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Fix the chicken taco image and restore missing chips & salsa and quesadilla images in the MenuSection, while retaining the existing catering banner.
+**Goal:** Remove the "Built by Caffeine AI" attribution from the website footer.
 
 **Planned changes:**
-- Replace the chicken taco menu card image with a correct image clearly showing grilled/seasoned chicken tacos
-- Restore the chips & salsa menu card image to display an appetizing chips and salsa photo
-- Restore the quesadilla menu card image to display an appealing quesadilla photo
-- Keep the catering section banner image (with the woman) and its enlarged height styling unchanged
+- Remove the "Built by Caffeine AI" text, link, and any associated UTM tracking from the Footer component
+- Ensure no empty gap or broken layout remains where the attribution was displayed
 
-**User-visible outcome:** The menu section correctly displays distinct, appetizing images for chicken tacos, chips & salsa, and quesadillas, and the catering banner at the bottom remains as-is.
+**User-visible outcome:** The footer no longer shows any reference to "Caffeine AI" or "Built by Caffeine AI," while all other footer content (logo, navigation links, contact info, copyright) remains intact.

@@ -1,56 +1,25 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-03-02T23:59:31.252Z",
+  "generatedAt": "2026-03-03T01:05:00.763Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 4,
-    "implemented": 3,
+    "total": 1,
+    "implemented": 1,
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Replace the current chicken taco images in the MenuSection with correct images that clearly show chicken tacos (with visible grilled/seasoned chicken as the filling). The images must look authentic and appetizing.",
+        "summary": "Remove the 'Built by Caffeine AI' attribution text and any associated link or UTM tracking from the Footer component. All other footer content (brand logo, quick navigation links, contact details, copyright notice) must remain unchanged.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/MenuSection.tsx"
+          "frontend/src/components/Footer.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/MenuSection.tsx"
+          "frontend/src/components/Footer.tsx"
         ]
-      },
-      {
-        "id": "REQ-2",
-        "summary": "Restore the salsa and chips menu item image in the MenuSection. This image was present in a previous version (live version) and must be brought back to the chips & salsa menu card.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/MenuSection.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/MenuSection.tsx"
-        ]
-      },
-      {
-        "id": "REQ-3",
-        "summary": "Restore the quesadilla menu item image in the MenuSection. This image was present in a previous version (live version) and must be brought back to the quesadilla menu card.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/MenuSection.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/MenuSection.tsx"
-        ]
-      },
-      {
-        "id": "REQ-4",
-        "summary": "Retain the new catering section banner image (the enlarged catering picture with the woman) at the bottom of the website in CateringSection. Do not revert or replace this image.",
-        "status": "missing",
-        "plannedFiles": [
-          "frontend/src/components/CateringSection.tsx"
-        ],
-        "matchedFiles": []
       }
     ]
   },
@@ -59,10 +28,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/chicken-tacos.dim_800x600.png",
-    "frontend/public/assets/generated/chips-salsa.dim_800x600.png",
-    "frontend/public/assets/generated/quesadilla.dim_800x600.png",
-    "frontend/src/components/MenuSection.tsx",
+    "frontend/src/components/Footer.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

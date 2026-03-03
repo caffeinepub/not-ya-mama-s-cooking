@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-replace-the-current-chicken-taco-images-in-the-menusection-with-correct-images-that-clearly-show-chicken-tacos-with-visible-grilled-seasoned-chicken-as-the-filling-the-images-must-look-authentic-and-appetizing",
-      "featureTitle": "Replace the current chicken taco images in the MenuSection with correct images that clearly show chicken tacos (with visible grilled/seasoned chicken as the filling). The images must look authentic and appetizing.",
+      "featureId": "feature-remove-the-built-by-caffeine-ai-attribution-text-and-any-associated-link-or-utm-tracking-from-the-footer-component-all-other-footer-content-brand-logo-quick-navigation-links-contact-details-copyright-notice-must-remain-unchanged",
+      "featureTitle": "Remove the 'Built by Caffeine AI' attribution text and any associated link or UTM tracking from the Footer component. All other footer content (brand logo, quick navigation links, contact details, copyright notice) must remain unchanged.",
       "files": [
-        "frontend/src/components/MenuSection.tsx"
+        "frontend/src/components/Footer.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -17,44 +17,6 @@
       ],
       "testIds": [
         "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-restore-the-salsa-and-chips-menu-item-image-in-the-menusection-this-image-was-present-in-a-previous-version-live-version-and-must-be-brought-back-to-the-chips-salsa-menu-card",
-      "featureTitle": "Restore the salsa and chips menu item image in the MenuSection. This image was present in a previous version (live version) and must be brought back to the chips & salsa menu card.",
-      "files": [
-        "frontend/src/components/MenuSection.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-2"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-restore-the-quesadilla-menu-item-image-in-the-menusection-this-image-was-present-in-a-previous-version-live-version-and-must-be-brought-back-to-the-quesadilla-menu-card",
-      "featureTitle": "Restore the quesadilla menu item image in the MenuSection. This image was present in a previous version (live version) and must be brought back to the quesadilla menu card.",
-      "files": [
-        "frontend/src/components/MenuSection.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-3"
       ],
       "confidence": "high"
     }

@@ -1,94 +1,39 @@
 {
   "kind": "build_request",
-  "title": "Fix chicken taco image and restore salsa/chips and quesadilla images",
+  "title": "Remove 'Built by Caffeine AI' attribution from footer",
   "projectName": "Not Ya Mama's Cooking",
-  "priority": "high",
+  "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Replace the current chicken taco images in the MenuSection with correct images that clearly show chicken tacos (with visible grilled/seasoned chicken as the filling). The images must look authentic and appetizing.",
+      "text": "Remove the 'Built by Caffeine AI' attribution text and any associated link or UTM tracking from the Footer component. All other footer content (brand logo, quick navigation links, contact details, copyright notice) must remain unchanged.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-1"
         ],
         "quotes": [
-          "The chicken tacos are not of images of chicken, so make sure to have that as chicken tacos"
+          "take built by caffeine AI off of the website on the bottom of the website take it off where it says caffeine AI"
         ]
       },
       "acceptanceCriteria": [
-        "The chicken taco menu card displays an image that clearly shows chicken tacos with chicken as the primary visible filling",
-        "The image is distinct from beef/street taco imagery used elsewhere on the site"
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "text": "Restore the salsa and chips menu item image in the MenuSection. This image was present in a previous version (live version) and must be brought back to the chips & salsa menu card.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "I need the image back of the salsa chips"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The chips & salsa menu card displays an appealing image of salsa and tortilla chips",
-        "The image is visible and properly sized within the menu card grid"
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "text": "Restore the quesadilla menu item image in the MenuSection. This image was present in a previous version (live version) and must be brought back to the quesadilla menu card.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "the image of the quesadilla"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The quesadilla menu card displays an appealing image of a quesadilla",
-        "The image is visible and properly sized within the menu card grid"
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "text": "Retain the new catering section banner image (the enlarged catering picture with the woman) at the bottom of the website in CateringSection. Do not revert or replace this image.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "leave the new catering picture at the bottom of the website"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The CateringSection at the bottom of the page continues to display the new catering banner image introduced in Version 19",
-        "The increased height classes (h-96 sm:h-[32rem]) on the banner image container remain unchanged"
+        "The footer no longer displays any text, link, or element referencing 'Caffeine AI' or 'Built by Caffeine AI'.",
+        "All other footer content (logo, nav links, contact info, copyright) is preserved exactly as in Version 20.",
+        "No broken layout or empty gap is left where the attribution previously appeared."
       ]
     }
   ],
   "constraints": [
-    "Do not modify or revert the catering section banner image introduced in Version 19",
-    "Restore only the specific missing/incorrect images; do not alter other menu item images (e.g., burrito, street taco)"
+    "Do not modify any other section or component beyond the Footer's Caffeine AI attribution.",
+    "Preserve all Version 20 content and styling everywhere else on the site."
   ],
   "nonGoals": [
-    "Redesigning the MenuSection layout or card structure",
-    "Changing menu item descriptions or ingredient details",
-    "Adding new menu items",
-    "Modifying any section other than the menu item images and retaining the catering banner"
+    "Changing any other footer content.",
+    "Modifying the Header, HeroSection, MenuSection, CateringSection, or ContactSection.",
+    "Any backend changes."
   ],
   "imageRequirements": {
-    "required": [
-      "Authentic Mexican chicken tacos with visible grilled seasoned chicken, fresh cilantro, diced onion, lime wedge, on corn tortillas, warm natural lighting (chicken-tacos.dim_800x600.png)",
-      "Mexican-style chips and salsa — crispy tortilla chips in a basket alongside a bowl of vibrant red salsa, garnished with cilantro, rustic wood or tile surface (chips-salsa.dim_800x600.png)",
-      "Golden crispy quesadilla cut into wedges showing melted cheese and chicken filling, served on a wooden board with sour cream and salsa dipping sides, warm lighting (quesadilla.dim_800x600.png)"
-    ],
+    "required": [],
     "edits": []
   }
 }
