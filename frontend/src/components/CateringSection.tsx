@@ -59,7 +59,7 @@ export function CateringSection() {
           <img
             src="/assets/generated/catering-banner.dim_1200x600.png"
             alt="Not Ya Mama's Cooking catering spread"
-            className="w-full h-64 sm:h-80 object-cover object-center"
+            className="w-full h-96 sm:h-[32rem] object-cover object-center"
           />
         </div>
 

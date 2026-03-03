@@ -1,118 +1,93 @@
 {
   "kind": "build_request",
-  "title": "Restore original Mexican food images from version 9 to selected elements",
+  "title": "Fix chicken taco image and restore salsa/chips and quesadilla images",
   "projectName": "Not Ya Mama's Cooking",
   "priority": "high",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Replace the image displayed in the first menu item card (article 1, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[1]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image that was present on the live website at version 9.",
+      "text": "Replace the current chicken taco images in the MenuSection with correct images that clearly show chicken tacos (with visible grilled/seasoned chicken as the filling). The images must look authentic and appetizing.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "I need the original Mexican food that are on the live website version nine"
+          "The chicken tacos are not of images of chicken, so make sure to have that as chicken tacos"
         ]
       },
       "acceptanceCriteria": [
-        "The first menu item card displays a Mexican food image, not a Chinese food image",
-        "The image matches what was shown in the live version 9 of the website",
-        "The image renders correctly and is not broken"
+        "The chicken taco menu card displays an image that clearly shows chicken tacos with chicken as the primary visible filling",
+        "The image is distinct from beef/street taco imagery used elsewhere on the site"
       ]
     },
     {
       "id": "REQ-2",
-      "text": "Replace the image displayed in the third menu item card (article 3, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[3]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
+      "text": "Restore the salsa and chips menu item image in the MenuSection. This image was present in a previous version (live version) and must be brought back to the chips & salsa menu card.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "I need the original Mexican food that are on the live website version nine"
+          "I need the image back of the salsa chips"
         ]
       },
       "acceptanceCriteria": [
-        "The third menu item card displays a Mexican food image, not a Chinese food image",
-        "The image matches what was shown in the live version 9 of the website",
-        "The image renders correctly and is not broken"
+        "The chips & salsa menu card displays an appealing image of salsa and tortilla chips",
+        "The image is visible and properly sized within the menu card grid"
       ]
     },
     {
       "id": "REQ-3",
-      "text": "Replace the image displayed in the fourth menu item card (article 4, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[4]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
+      "text": "Restore the quesadilla menu item image in the MenuSection. This image was present in a previous version (live version) and must be brought back to the quesadilla menu card.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "I need the original Mexican food that are on the live website version nine"
+          "the image of the quesadilla"
         ]
       },
       "acceptanceCriteria": [
-        "The fourth menu item card displays a Mexican food image, not a Chinese food image",
-        "The image matches what was shown in the live version 9 of the website",
-        "The image renders correctly and is not broken"
+        "The quesadilla menu card displays an appealing image of a quesadilla",
+        "The image is visible and properly sized within the menu card grid"
       ]
     },
     {
       "id": "REQ-4",
-      "text": "Replace the image displayed in the fifth menu item card (article 5, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[5]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
+      "text": "Retain the new catering section banner image (the enlarged catering picture with the woman) at the bottom of the website in CateringSection. Do not revert or replace this image.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "I need the original Mexican food that are on the live website version nine"
+          "leave the new catering picture at the bottom of the website"
         ]
       },
       "acceptanceCriteria": [
-        "The fifth menu item card displays a Mexican food image, not a Chinese food image",
-        "The image matches what was shown in the live version 9 of the website",
-        "The image renders correctly and is not broken"
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "text": "Replace the image in the catering section (XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[3]/div[2]/div[2]/img[1]) with the correct original Mexican food/catering image from version 9. The current image is incorrect and must be replaced with the authentic catering image that appeared on the live version 9 website.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "I need the original Mexican food that are on the live website version nine"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The catering section image displays the correct Mexican food/catering image from version 9",
-        "The image is not showing Chinese food content",
-        "The image renders correctly and is not broken"
+        "The CateringSection at the bottom of the page continues to display the new catering banner image introduced in Version 19",
+        "The increased height classes (h-96 sm:h-[32rem]) on the banner image container remain unchanged"
       ]
     }
   ],
   "constraints": [
-    "Only modify the five selected elements identified by the provided XPath expressions",
-    "Do not alter any other images, layout, text, or components not referenced in the selected elements",
-    "Images must come from the existing version 9 assets already in the project (frontend/public/assets/generated) — do not create new placeholder images"
+    "Do not modify or revert the catering section banner image introduced in Version 19",
+    "Restore only the specific missing/incorrect images; do not alter other menu item images (e.g., burrito, street taco)"
   ],
   "nonGoals": [
-    "Changing any text, descriptions, or non-image content",
-    "Modifying menu item cards not listed in the selected elements",
-    "Redesigning any section layout or styling",
-    "Updating backend logic"
+    "Redesigning the MenuSection layout or card structure",
+    "Changing menu item descriptions or ingredient details",
+    "Adding new menu items",
+    "Modifying any section other than the menu item images and retaining the catering banner"
   ],
   "imageRequirements": {
     "required": [
-      "Authentic Mexican street tacos on a rustic wooden board with cilantro, lime wedges, and salsa (taco-menu-item.dim_600x400.png)",
-      "Loaded Mexican burrito cut in half showing rice, beans, and seasoned meat filling (burrito-menu-item.dim_600x400.png)",
-      "Golden crispy quesadilla sliced into wedges with sour cream and guacamole dipping sauces (quesadilla-menu-item.dim_600x400.png)",
-      "Tortilla chips in a basket with fresh chunky salsa roja in a small bowl (chips-salsa-menu-item.dim_600x400.png)",
-      "Mexican catering spread with trays of tacos, rice, beans, and colorful garnishes at an outdoor event (catering-banner.dim_1200x600.png)"
+      "Authentic Mexican chicken tacos with visible grilled seasoned chicken, fresh cilantro, diced onion, lime wedge, on corn tortillas, warm natural lighting (chicken-tacos.dim_800x600.png)",
+      "Mexican-style chips and salsa — crispy tortilla chips in a basket alongside a bowl of vibrant red salsa, garnished with cilantro, rustic wood or tile surface (chips-salsa.dim_800x600.png)",
+      "Golden crispy quesadilla cut into wedges showing melted cheese and chicken filling, served on a wooden board with sour cream and salsa dipping sides, warm lighting (quesadilla.dim_800x600.png)"
     ],
     "edits": []
   }

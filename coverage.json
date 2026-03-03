@@ -1,18 +1,18 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-03-02T23:31:19.913Z",
+  "generatedAt": "2026-03-02T23:59:31.252Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 5,
-    "implemented": 4,
+    "total": 4,
+    "implemented": 3,
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Replace the image displayed in the first menu item card (article 1, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[1]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image that was present on the live website at version 9.",
+        "summary": "Replace the current chicken taco images in the MenuSection with correct images that clearly show chicken tacos (with visible grilled/seasoned chicken as the filling). The images must look authentic and appetizing.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/MenuSection.tsx"
@@ -23,7 +23,7 @@
       },
       {
         "id": "REQ-2",
-        "summary": "Replace the image displayed in the third menu item card (article 3, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[3]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
+        "summary": "Restore the salsa and chips menu item image in the MenuSection. This image was present in a previous version (live version) and must be brought back to the chips & salsa menu card.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/MenuSection.tsx"
@@ -34,7 +34,7 @@
       },
       {
         "id": "REQ-3",
-        "summary": "Replace the image displayed in the fourth menu item card (article 4, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[4]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
+        "summary": "Restore the quesadilla menu item image in the MenuSection. This image was present in a previous version (live version) and must be brought back to the quesadilla menu card.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/MenuSection.tsx"
@@ -45,18 +45,7 @@
       },
       {
         "id": "REQ-4",
-        "summary": "Replace the image displayed in the fifth menu item card (article 5, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[5]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/MenuSection.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/MenuSection.tsx"
-        ]
-      },
-      {
-        "id": "REQ-5",
-        "summary": "Replace the image in the catering section (XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[3]/div[2]/div[2]/img[1]) with the correct original Mexican food/catering image from version 9. The current image is incorrect and must be replaced with the authentic catering image that appeared on the live version 9 website.",
+        "summary": "Retain the new catering section banner image (the enlarged catering picture with the woman) at the bottom of the website in CateringSection. Do not revert or replace this image.",
         "status": "missing",
         "plannedFiles": [
           "frontend/src/components/CateringSection.tsx"
@@ -70,11 +59,9 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/burrito-menu-item.dim_600x400.png",
-    "frontend/public/assets/generated/catering-banner.dim_1200x600.png",
-    "frontend/public/assets/generated/chips-salsa-menu-item.dim_600x400.png",
-    "frontend/public/assets/generated/quesadilla-menu-item.dim_600x400.png",
-    "frontend/public/assets/generated/taco-menu-item.dim_600x400.png",
+    "frontend/public/assets/generated/chicken-tacos.dim_800x600.png",
+    "frontend/public/assets/generated/chips-salsa.dim_800x600.png",
+    "frontend/public/assets/generated/quesadilla.dim_800x600.png",
     "frontend/src/components/MenuSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",

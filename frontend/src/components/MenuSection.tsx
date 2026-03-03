@@ -17,7 +17,7 @@ const menuItems: MenuItem[] = [
     name: 'Chicken Street Tacos',
     description:
       'Tender, marinated chicken grilled to perfection on a warm corn tortilla. Topped with fresh diced onion, fragrant cilantro, a squeeze of lime, and our house salsa verde.',
-    image: '/assets/generated/tacos.dim_800x600.png',
+    image: '/assets/generated/chicken-tacos.dim_800x600.png',
     badge: 'Signature',
     isSignature: true,
     details: ['Corn tortillas', 'Flour Tortillas', 'Grilled chicken', 'Fresh cilantro & onion', 'Salsa verde', 'Lime'],
@@ -37,7 +37,7 @@ const menuItems: MenuItem[] = [
     name: 'Quesadillas',
     description:
       'Lightly toasted flour tortillas filled with gooey melted cheese. Served with fresh cilantro, sliced onions, house salsa, and cool sour cream on the side.',
-    image: '/assets/generated/quesadillas.dim_800x600.png',
+    image: '/assets/generated/quesadilla.dim_800x600.png',
     details: ['Flour tortilla', 'Melted cheese blend', 'Cilantro & sliced onions', 'House salsa', 'Sour cream'],
     choices: [
       { label: 'Cheese', emoji: '🧀' },
@@ -58,7 +58,7 @@ const menuItems: MenuItem[] = [
     name: 'Stuffed Burritos',
     description:
       'A hearty flour tortilla packed with seasoned rice, refried beans, your choice of chicken or beef, melted cheese, sour cream, and fresh guacamole. A full meal in every bite.',
-    image: '/assets/generated/burritos.dim_800x600.png',
+    image: '/assets/generated/burrito.dim_800x600.png',
     details: ['Flour tortilla', 'Seasoned rice & beans', 'Choice of protein', 'Melted cheese', 'Guacamole & sour cream'],
   },
 ];

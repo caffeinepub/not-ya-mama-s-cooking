@@ -1,13 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Restore the correct Mexican food images in five specific elements (four menu item cards and the catering section) that are currently displaying incorrect Chinese food images.
+**Goal:** Fix the chicken taco image and restore missing chips & salsa and quesadilla images in the MenuSection, while retaining the existing catering banner.
 
 **Planned changes:**
-- Replace the image in the first menu item card with an authentic Mexican taco image
-- Replace the image in the third menu item card with an authentic Mexican burrito image
-- Replace the image in the fourth menu item card with an authentic Mexican quesadilla image
-- Replace the image in the fifth menu item card with an authentic chips & salsa image
-- Replace the catering section image with an authentic Mexican catering spread image
+- Replace the chicken taco menu card image with a correct image clearly showing grilled/seasoned chicken tacos
+- Restore the chips & salsa menu card image to display an appetizing chips and salsa photo
+- Restore the quesadilla menu card image to display an appealing quesadilla photo
+- Keep the catering section banner image (with the woman) and its enlarged height styling unchanged
 
-**User-visible outcome:** All five affected elements display correct Mexican food images instead of Chinese food images, matching the appearance of version 9 of the website.
+**User-visible outcome:** The menu section correctly displays distinct, appetizing images for chicken tacos, chips & salsa, and quesadillas, and the catering banner at the bottom remains as-is.

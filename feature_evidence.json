@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-replace-the-image-displayed-in-the-first-menu-item-card-article-1-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-1-div-2-article-1-div-1-div-1-with-the-correct-original-mexican-food-image-from-version-9-the-current-image-shows-chinese-food-and-must-be-replaced-with-the-authentic-mexican-food-image-that-was-present-on-the-live-website-at-version-9",
-      "featureTitle": "Replace the image displayed in the first menu item card (article 1, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[1]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image that was present on the live website at version 9.",
+      "featureId": "feature-replace-the-current-chicken-taco-images-in-the-menusection-with-correct-images-that-clearly-show-chicken-tacos-with-visible-grilled-seasoned-chicken-as-the-filling-the-images-must-look-authentic-and-appetizing",
+      "featureTitle": "Replace the current chicken taco images in the MenuSection with correct images that clearly show chicken tacos (with visible grilled/seasoned chicken as the filling). The images must look authentic and appetizing.",
       "files": [
         "frontend/src/components/MenuSection.tsx"
       ],
@@ -21,8 +21,8 @@
       "confidence": "high"
     },
     {
-      "featureId": "feature-replace-the-image-displayed-in-the-third-menu-item-card-article-3-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-1-div-2-article-3-div-1-div-1-with-the-correct-original-mexican-food-image-from-version-9-the-current-image-shows-chinese-food-and-must-be-replaced-with-the-authentic-mexican-food-image-from-the-live-website",
-      "featureTitle": "Replace the image displayed in the third menu item card (article 3, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[3]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
+      "featureId": "feature-restore-the-salsa-and-chips-menu-item-image-in-the-menusection-this-image-was-present-in-a-previous-version-live-version-and-must-be-brought-back-to-the-chips-salsa-menu-card",
+      "featureTitle": "Restore the salsa and chips menu item image in the MenuSection. This image was present in a previous version (live version) and must be brought back to the chips & salsa menu card.",
       "files": [
         "frontend/src/components/MenuSection.tsx"
       ],
@@ -40,8 +40,8 @@
       "confidence": "high"
     },
     {
-      "featureId": "feature-replace-the-image-displayed-in-the-fourth-menu-item-card-article-4-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-1-div-2-article-4-div-1-div-1-with-the-correct-original-mexican-food-image-from-version-9-the-current-image-shows-chinese-food-and-must-be-replaced-with-the-authentic-mexican-food-image-from-the-live-website",
-      "featureTitle": "Replace the image displayed in the fourth menu item card (article 4, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[4]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
+      "featureId": "feature-restore-the-quesadilla-menu-item-image-in-the-menusection-this-image-was-present-in-a-previous-version-live-version-and-must-be-brought-back-to-the-quesadilla-menu-card",
+      "featureTitle": "Restore the quesadilla menu item image in the MenuSection. This image was present in a previous version (live version) and must be brought back to the quesadilla menu card.",
       "files": [
         "frontend/src/components/MenuSection.tsx"
       ],
@@ -55,25 +55,6 @@
       ],
       "testIds": [
         "REQ-3"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-replace-the-image-displayed-in-the-fifth-menu-item-card-article-5-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-1-div-2-article-5-div-1-div-1-with-the-correct-original-mexican-food-image-from-version-9-the-current-image-shows-chinese-food-and-must-be-replaced-with-the-authentic-mexican-food-image-from-the-live-website",
-      "featureTitle": "Replace the image displayed in the fifth menu item card (article 5, XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/article[5]/div[1]/div[1]) with the correct original Mexican food image from version 9. The current image shows Chinese food and must be replaced with the authentic Mexican food image from the live website.",
-      "files": [
-        "frontend/src/components/MenuSection.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-4"
       ],
       "confidence": "high"
     }
